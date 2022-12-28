@@ -1,1 +1,796 @@
-{"current":{"style_2_headings_accent_color":"#ffffff","type_header_font":"harmonia_sans_n7","type_body_font":"harmonia_sans_n4","enable_localization":true,"phone":"+123456","email":"email@example.com","show_currency_codes":false,"enable_cart_shipping_bar":false,"cart_shipping_bar_threshold":100,"cart_shipping_bar_progress_text":"You are [amount] away from Free Shipping","cart_shipping_bar_success_text":"Congratulations! You're eligible for free shipping!","cart_shipping_bar_empty_text":"Spend $100 USD and get free shipping!","enable_cart_upsell":true,"cart_upsell_title":"You might also like","cart_empty_upsell_title":"You might like","cart_empty_upsell_product_list":[],"cart_upsell_use_recommendations_api":true,"additional_checkout_buttons":true,"enable_terms":false,"show_payment_icons":true,"enable_message":true,"wrap_product":"","enable_images_filtering":false,"card_product_swap_image_on_hover":true,"card_product_media_size":"portrait","card_product_media_crop":true,"card_product_image_alignment":"center","swatches_hex_codes":"","swatches_use_image_assets":false,"sections":{"cookie-banner":{"type":"cookie-banner","settings":{"style":"style-1","show_in_editor":false,"disable":false,"heading":"We use cookies","text":"<p>We use cookies to improve user experience and analyze website traffic.<\/p>","accept_button_text":"Accept","close_button_text":"Close"}},"newsletter-popup":{"type":"newsletter-popup","settings":{"style":"style-1","show_in_editor":false,"enable":true,"delay":10,"logo_width":150,"logo_width_mobile":150,"subheading":"Add a tagline","title":"Subscribe to newsletter","entry":"<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>","image_position":"right","form_code":""}},"header":{"type":"header","settings":{"style":"style-2","logo_position":"center","logo_svg_code":"","logo_width":170,"logo_width_mobile":170,"menu":"main-menu","dropdown_animation_type":"elastic","enable_predictive_search":true,"transparent":false}},"footer":{"type":"footer","blocks":{"3a7b51d5-1527-4f13-8bad-3765962dcfa2":{"type":"menu","settings":{"menu":"footer"}},"f4c973c8-0b10-487a-a4cc-a602f7440aca":{"type":"textual","settings":{"title":"Contact","text":"<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"}},"920f08a5-a221-4bda-a38a-6d0a83ebfab6":{"type":"newsletter","settings":{"title":"Newsletter","text":"Add descriptive text to invite your users to sign up for your newsletter.","show_privacy_note":true,"enable_localization":true}}},"block_order":["3a7b51d5-1527-4f13-8bad-3765962dcfa2","f4c973c8-0b10-487a-a4cc-a602f7440aca","920f08a5-a221-4bda-a38a-6d0a83ebfab6"],"settings":{"style":"style-2","fullwidth":false,"show_payment_icons":true,"logo_svg_code":"","below_logo_text":"Share information about your brand with your customers."}},"announcement-bar":{"type":"announcement-bar","blocks":{"6de734d5-cb1e-4e69-bec4-65997d16bcf0":{"type":"content_item","settings":{"title":"<p>Announcement text here<\/p>"}}},"block_order":["6de734d5-cb1e-4e69-bec4-65997d16bcf0"],"settings":{"style":"style-2","enable":true,"enable_localization":true,"enable_close":true,"enable_contact_links":true,"content_horizontal_alignment":"center","type":"loop"}},"usp":{"type":"usp","blocks":{"e74fe601-9011-42c0-8520-0c212d1f543f":{"type":"item","settings":{"title":"Free Shipping","text":"International shipping available for all orders over $50","icon_type":"truck"}},"9b3566de-424e-43f5-ae1c-b62f5e4e3b70":{"type":"item","settings":{"title":"Buy Now. Pay Later","text":"0% Interest financing available. Pay after 30 days","icon_type":"card"}},"5b0628ee-9d54-43a3-8cfc-4e7b2b61820c":{"type":"item","settings":{"title":"Cashback Reward","text":"Collect & Redeem on every order that you purchased","icon_type":"cash"}},"c3aab198-4c9d-47a3-8ecf-8a5c524ce677":{"type":"item","settings":{"title":"Secure Payments","text":"Guarantee 100% secure payments online on our website","icon_type":"shield-check"}}},"block_order":["e74fe601-9011-42c0-8520-0c212d1f543f","9b3566de-424e-43f5-ae1c-b62f5e4e3b70","5b0628ee-9d54-43a3-8cfc-4e7b2b61820c","c3aab198-4c9d-47a3-8ecf-8a5c524ce677"],"settings":{"style":"style-1"}},"quickview":{"type":"quickview","blocks":{"61b1ed02-d2be-4d9d-9ce9-70fd971a7a68":{"type":"title","settings":{}},"914ecbd9-75e8-4f25-8779-c2232b60c370":{"type":"price","settings":{}},"0afd551e-d254-4ff0-8700-e97340d3cb09":{"type":"variant-selector","settings":{}},"0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac":{"type":"quantity-input","settings":{}},"b5991802-fdf6-4638-bfd9-d7a11f98b493":{"type":"buy-buttons","settings":{"show_dynamic_checkout":true}}},"block_order":["61b1ed02-d2be-4d9d-9ce9-70fd971a7a68","914ecbd9-75e8-4f25-8779-c2232b60c370","0afd551e-d254-4ff0-8700-e97340d3cb09","0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac","b5991802-fdf6-4638-bfd9-d7a11f98b493"],"settings":{"style":"style-1"}},"gift-card":{"type":"gift-card","settings":{"style":"style-1","header_logo_image":"{{ shop.brand.logo }}","background_image":"shopify:\/\/shop_images\/DSC_2773_copy.jpg","logo_image":"{{ shop.brand.logo }}","logo_svg":""}},"main-password-header":{"type":"main-password-header","settings":{"style":"style-1","logo":"{{ shop.brand.logo }}","logo_width":150,"logo_width_mobile":150}},"main-password-footer":{"type":"main-password-footer","settings":{"style":"style-1"}}},"content_for_index":[]},"presets":{"Marble":{"style_2_headings_accent_color":"#ffffff","type_header_font":"harmonia_sans_n7","type_body_font":"harmonia_sans_n4","enable_localization":true,"phone":"+123456","email":"email@example.com","show_currency_codes":false,"enable_cart_shipping_bar":false,"cart_shipping_bar_threshold":100,"cart_shipping_bar_progress_text":"You are [amount] away from Free Shipping","cart_shipping_bar_success_text":"Congratulations! You're eligible for free shipping!","cart_shipping_bar_empty_text":"Spend $100 USD and get free shipping!","enable_cart_upsell":true,"cart_upsell_title":"You might also like","cart_empty_upsell_title":"You might like","cart_empty_upsell_product_list":[],"cart_upsell_use_recommendations_api":true,"additional_checkout_buttons":true,"enable_terms":false,"show_payment_icons":true,"enable_message":true,"wrap_product":"","enable_images_filtering":false,"card_product_swap_image_on_hover":true,"card_product_media_size":"portrait","card_product_media_crop":true,"card_product_image_alignment":"center","swatches_hex_codes":"","swatches_use_image_assets":false,"sections":{"cookie-banner":{"type":"cookie-banner","settings":{"style":"style-1","show_in_editor":false,"disable":false,"heading":"We use cookies","text":"<p>We use cookies to improve user experience and analyze website traffic.<\/p>","accept_button_text":"Accept","close_button_text":"Close"}},"newsletter-popup":{"type":"newsletter-popup","settings":{"style":"style-1","show_in_editor":false,"enable":true,"delay":10,"logo_width":150,"logo_width_mobile":150,"subheading":"Add a tagline","title":"Subscribe to newsletter","entry":"<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>","image_position":"right","form_code":""}},"header":{"type":"header","settings":{"style":"style-2","logo_position":"center","logo_svg_code":"","logo_width":170,"logo_width_mobile":170,"menu":"main-menu","dropdown_animation_type":"elastic","enable_predictive_search":true,"transparent":false}},"footer":{"type":"footer","blocks":{"3a7b51d5-1527-4f13-8bad-3765962dcfa2":{"type":"menu","settings":{"menu":"footer"}},"f4c973c8-0b10-487a-a4cc-a602f7440aca":{"type":"textual","settings":{"title":"Contact","text":"<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"}},"920f08a5-a221-4bda-a38a-6d0a83ebfab6":{"type":"newsletter","settings":{"title":"Newsletter","text":"Add descriptive text to invite your users to sign up for your newsletter.","show_privacy_note":true,"enable_localization":true}}},"block_order":["3a7b51d5-1527-4f13-8bad-3765962dcfa2","f4c973c8-0b10-487a-a4cc-a602f7440aca","920f08a5-a221-4bda-a38a-6d0a83ebfab6"],"settings":{"style":"style-2","fullwidth":false,"show_payment_icons":true,"logo_svg_code":"","below_logo_text":"Share information about your brand with your customers."}},"announcement-bar":{"type":"announcement-bar","blocks":{"6de734d5-cb1e-4e69-bec4-65997d16bcf0":{"type":"content_item","settings":{"title":"<p>Announcement text here<\/p>"}}},"block_order":["6de734d5-cb1e-4e69-bec4-65997d16bcf0"],"settings":{"style":"style-2","enable":true,"enable_localization":true,"enable_close":true,"enable_contact_links":true,"content_horizontal_alignment":"center","type":"loop"}},"usp":{"type":"usp","blocks":{"e74fe601-9011-42c0-8520-0c212d1f543f":{"type":"item","settings":{"title":"Free Shipping","text":"International shipping available for all orders over $50","icon_type":"truck"}},"9b3566de-424e-43f5-ae1c-b62f5e4e3b70":{"type":"item","settings":{"title":"Buy Now. Pay Later","text":"0% Interest financing available. Pay after 30 days","icon_type":"card"}},"5b0628ee-9d54-43a3-8cfc-4e7b2b61820c":{"type":"item","settings":{"title":"Cashback Reward","text":"Collect & Redeem on every order that you purchased","icon_type":"cash"}},"c3aab198-4c9d-47a3-8ecf-8a5c524ce677":{"type":"item","settings":{"title":"Secure Payments","text":"Guarantee 100% secure payments online on our website","icon_type":"shield-check"}}},"block_order":["e74fe601-9011-42c0-8520-0c212d1f543f","9b3566de-424e-43f5-ae1c-b62f5e4e3b70","5b0628ee-9d54-43a3-8cfc-4e7b2b61820c","c3aab198-4c9d-47a3-8ecf-8a5c524ce677"],"settings":{"style":"style-1"}},"quickview":{"type":"quickview","blocks":{"61b1ed02-d2be-4d9d-9ce9-70fd971a7a68":{"type":"title","settings":{}},"914ecbd9-75e8-4f25-8779-c2232b60c370":{"type":"price","settings":{}},"0afd551e-d254-4ff0-8700-e97340d3cb09":{"type":"variant-selector","settings":{}},"0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac":{"type":"quantity-input","settings":{}},"b5991802-fdf6-4638-bfd9-d7a11f98b493":{"type":"buy-buttons","settings":{"show_dynamic_checkout":true}}},"block_order":["61b1ed02-d2be-4d9d-9ce9-70fd971a7a68","914ecbd9-75e8-4f25-8779-c2232b60c370","0afd551e-d254-4ff0-8700-e97340d3cb09","0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac","b5991802-fdf6-4638-bfd9-d7a11f98b493"],"settings":{"style":"style-1"}},"gift-card":{"type":"gift-card","settings":{"style":"style-1","header_logo_image":"{{ shop.brand.logo }}","background_image":"shopify:\/\/shop_images\/DSC_2773_copy.jpg","logo_image":"{{ shop.brand.logo }}","logo_svg":""}},"main-password-header":{"type":"main-password-header","settings":{"style":"style-1","logo":"{{ shop.brand.logo }}","logo_width":150,"logo_width_mobile":150}},"main-password-footer":{"type":"main-password-footer","settings":{"style":"style-1"}}},"content_for_index":[]},"ARDA":{"style_1_sliders_paging_color":"#074a42","style_1_badge_background_color":"#000000","style_1_badge_sale_background_color":"#579c94","style_1_progress_bar_color":"#074a42","style_2_background_color":"#074a42","style_2_headings_accent_color":"#ffffff","style_2_buttons_solid_color":"#074a42","style_2_sliders_actions_color":"#074a42","style_2_seperators_color":"#0f5c53","style_2_badge_color":"#074a42","style_2_input_background_color":"#106056","style_3_background_color":"#f8f7f4","style_3_foreground_color":"#000000","style_3_headings_color":"#000000","style_3_headings_accent_color":"#000000","style_3_paragraphs_color":"#000000","style_3_buttons_solid_background_color":"#000000","style_3_buttons_outline_color":"#000000","style_3_buttons_links_color":"#000000","style_3_sliders_paging_color":"#000","style_3_sliders_actions_background_color":"#000","type_header_font":"basic_commercial_n4","type_body_font":"basic_commercial_n4","buttons_border_radius":50,"boxed_items_round_corners":true,"featured_cards_round_corners":true,"enable_localization":true,"phone":"+123456","email":"email@example.com","show_currency_codes":false,"cart_page_style":"style-1","cart_drawer_style":"style-2","enable_cart_shipping_bar":false,"cart_shipping_bar_threshold":100,"cart_shipping_bar_progress_text":"You are [amount] away from Free Shipping","cart_shipping_bar_success_text":"Congratulations! You're eligible for free shipping!","cart_shipping_bar_empty_text":"Spend $100 USD and get free shipping!","enable_cart_upsell":true,"cart_upsell_title":"You might also like","cart_empty_upsell_title":"You might like","cart_empty_upsell_product_list":[],"cart_upsell_use_recommendations_api":true,"additional_checkout_buttons":true,"enable_terms":false,"show_payment_icons":true,"enable_message":true,"wrap_product":"","enable_images_filtering":false,"badges_border_radius":5,"card_product_round_corners":true,"card_product_swap_image_on_hover":true,"card_product_media_size":"portrait","card_product_media_crop":true,"card_product_image_alignment":"center","swatches_hex_codes":"","swatches_use_image_assets":false,"sections":{"cookie-banner":{"type":"cookie-banner","settings":{"style":"style-1","show_in_editor":false,"disable":false,"heading":"We use cookies","text":"<p>We use cookies to improve user experience and analyze website traffic.<\/p>","accept_button_text":"Accept","close_button_text":"Close"}},"newsletter-popup":{"type":"newsletter-popup","settings":{"style":"style-1","show_in_editor":false,"enable":true,"delay":10,"logo_width":150,"logo_width_mobile":150,"subheading":"Add a tagline","title":"Subscribe to newsletter","entry":"<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>","image_position":"right","form_code":""}},"header":{"type":"header","settings":{"style":"style-2","logo_position":"center","logo_svg_code":"","logo_width":170,"logo_width_mobile":170,"menu":"main-menu","dropdown_animation_type":"elastic","enable_predictive_search":true,"transparent":false}},"footer":{"type":"footer","blocks":{"3a7b51d5-1527-4f13-8bad-3765962dcfa2":{"type":"menu","settings":{"menu":"footer"}},"f4c973c8-0b10-487a-a4cc-a602f7440aca":{"type":"textual","settings":{"title":"Contact","text":"<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"}},"920f08a5-a221-4bda-a38a-6d0a83ebfab6":{"type":"newsletter","settings":{"title":"Newsletter","text":"Add descriptive text to invite your users to sign up for your newsletter.","show_privacy_note":true,"enable_localization":true}}},"block_order":["3a7b51d5-1527-4f13-8bad-3765962dcfa2","f4c973c8-0b10-487a-a4cc-a602f7440aca","920f08a5-a221-4bda-a38a-6d0a83ebfab6"],"settings":{"style":"style-2","fullwidth":false,"show_payment_icons":true,"logo_svg_code":"","below_logo_text":"Share information about your brand with your customers."}},"announcement-bar":{"type":"announcement-bar","blocks":{"6de734d5-cb1e-4e69-bec4-65997d16bcf0":{"type":"content_item","settings":{"title":"<p>Announcement text here<\/p>"}}},"block_order":["6de734d5-cb1e-4e69-bec4-65997d16bcf0"],"settings":{"style":"style-2","enable":true,"enable_localization":true,"enable_close":true,"enable_contact_links":true,"content_horizontal_alignment":"center","type":"loop"}},"usp":{"type":"usp","blocks":{"e74fe601-9011-42c0-8520-0c212d1f543f":{"type":"item","settings":{"title":"Free Shipping","text":"International shipping available for all orders over $50","icon_type":"truck"}},"9b3566de-424e-43f5-ae1c-b62f5e4e3b70":{"type":"item","settings":{"title":"Buy Now. Pay Later","text":"0% Interest financing available. Pay after 30 days","icon_type":"card"}},"5b0628ee-9d54-43a3-8cfc-4e7b2b61820c":{"type":"item","settings":{"title":"Cashback Reward","text":"Collect & Redeem on every order that you purchased","icon_type":"cash"}},"c3aab198-4c9d-47a3-8ecf-8a5c524ce677":{"type":"item","settings":{"title":"Secure Payments","text":"Guarantee 100% secure payments online on our website","icon_type":"shield-check"}}},"block_order":["e74fe601-9011-42c0-8520-0c212d1f543f","9b3566de-424e-43f5-ae1c-b62f5e4e3b70","5b0628ee-9d54-43a3-8cfc-4e7b2b61820c","c3aab198-4c9d-47a3-8ecf-8a5c524ce677"],"settings":{"style":"style-1"}},"quickview":{"type":"quickview","blocks":{"61b1ed02-d2be-4d9d-9ce9-70fd971a7a68":{"type":"title","settings":{}},"914ecbd9-75e8-4f25-8779-c2232b60c370":{"type":"price","settings":{}},"0afd551e-d254-4ff0-8700-e97340d3cb09":{"type":"variant-selector","settings":{}},"0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac":{"type":"quantity-input","settings":{}},"b5991802-fdf6-4638-bfd9-d7a11f98b493":{"type":"buy-buttons","settings":{"show_dynamic_checkout":true}}},"block_order":["61b1ed02-d2be-4d9d-9ce9-70fd971a7a68","914ecbd9-75e8-4f25-8779-c2232b60c370","0afd551e-d254-4ff0-8700-e97340d3cb09","0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac","b5991802-fdf6-4638-bfd9-d7a11f98b493"],"settings":{"style":"style-1"}},"gift-card":{"type":"gift-card","settings":{"style":"style-1","header_logo_image":"{{ shop.brand.logo }}","background_image":"shopify:\/\/shop_images\/DSC_2773_copy.jpg","logo_image":"{{ shop.brand.logo }}","logo_svg":""}},"main-password-header":{"type":"main-password-header","settings":{"style":"style-1","logo":"{{ shop.brand.logo }}","logo_width":150,"logo_width_mobile":150}},"main-password-footer":{"type":"main-password-footer","settings":{"style":"style-1"}}},"content_for_index":[]}}}
+{
+  "current": {
+    "style_2_headings_accent_color": "#ffffff",
+    "type_header_font": "harmonia_sans_n7",
+    "type_body_font": "harmonia_sans_n4",
+    "enable_localization": true,
+    "phone": "+123456",
+    "email": "email@example.com",
+    "show_currency_codes": false,
+    "enable_cart_shipping_bar": false,
+    "cart_shipping_bar_threshold": 100,
+    "cart_shipping_bar_progress_text": "You are [amount] away from Free Shipping",
+    "cart_shipping_bar_success_text": "Congratulations! You're eligible for free shipping!",
+    "cart_shipping_bar_empty_text": "Spend $100 USD and get free shipping!",
+    "enable_cart_upsell": true,
+    "cart_upsell_title": "You might also like",
+    "cart_empty_upsell_title": "You might like",
+    "cart_empty_upsell_product_list": [
+
+    ],
+    "cart_upsell_use_recommendations_api": true,
+    "additional_checkout_buttons": true,
+    "enable_terms": false,
+    "show_payment_icons": true,
+    "enable_message": true,
+    "wrap_product": "",
+    "enable_images_filtering": false,
+    "card_product_swap_image_on_hover": true,
+    "card_product_media_size": "portrait",
+    "card_product_media_crop": true,
+    "card_product_image_alignment": "center",
+    "swatches_hex_codes": "",
+    "swatches_use_image_assets": false,
+    "sections": {
+      "cookie-banner": {
+        "type": "cookie-banner",
+        "settings": {
+          "style": "style-1",
+          "show_in_editor": false,
+          "disable": false,
+          "heading": "We use cookies",
+          "text": "<p>We use cookies to improve user experience and analyze website traffic.<\/p>",
+          "accept_button_text": "Accept",
+          "close_button_text": "Close"
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "style": "style-1",
+          "show_in_editor": false,
+          "enable": true,
+          "delay": 10,
+          "logo_width": 150,
+          "logo_width_mobile": 150,
+          "subheading": "Add a tagline",
+          "title": "Subscribe to newsletter",
+          "entry": "<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>",
+          "image_position": "right",
+          "form_code": ""
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "style": "style-2",
+          "logo_position": "center",
+          "logo_svg_code": "<svg width=\"367\" height=\"46\" viewbox=\"0 0 367 46\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M10.1797 1.05469H21.3125L13.9297 35.9766H54.0664C54.0664 35.8984 54.1055 35.8984 54.1836 35.9766C54.3008 35.8984 54.3594 35.8984 54.3594 35.9766L52.4258 45H0.863281L10.1797 1.05469ZM62.7969 1.05469L62.8555 1.11328C62.8945 1.11328 62.9336 1.13281 62.9727 1.17188C63.0117 1.25 63.0312 1.28906 63.0312 1.28906V1.34766L75.8633 17.8711L95.668 1.34766L95.7852 1.28906C95.8242 1.25 95.8438 1.21094 95.8438 1.17188C95.9219 1.13281 95.9609 1.11328 95.9609 1.11328L96.0195 1.05469H109.027C109.105 1.05469 109.066 1.09375 108.91 1.17188C108.871 1.25 108.852 1.28906 108.852 1.28906L108.734 1.34766H108.676L79.7305 25.6641L75.6289 45H64.5547L68.6562 25.6641L49.7305 1.05469H62.7969ZM125.551 1.05469L158.891 37.9102L166.684 1.05469H177.758L168.441 45H150.746L120.043 11.0156L112.836 45H101.762L111.078 1.05469H125.551ZM206.938 18.8672H241.742L237.23 40.1367C234.926 41.7773 231.352 43.1055 226.508 44.1211C221.703 45.0977 215.902 45.5859 209.105 45.5859C203.91 45.5859 199.281 45.0586 195.219 44.0039C191.195 42.9102 187.855 41.3867 185.199 39.4336C182.582 37.4414 180.727 35.0586 179.633 32.2852C178.539 29.5117 178.363 26.4258 179.105 23.0273C179.809 19.6289 181.293 16.543 183.559 13.7695C185.824 10.9961 188.695 8.63281 192.172 6.67969C195.648 4.6875 199.633 3.16406 204.125 2.10938C208.656 1.01563 213.52 0.46875 218.715 0.46875C220.746 0.46875 223.012 0.585938 225.512 0.820312C228.051 1.05469 230.512 1.50391 232.895 2.16797C235.316 2.83203 237.484 3.75 239.398 4.92188C241.352 6.09375 242.758 7.61719 243.617 9.49219L234.008 16.2891C233.656 15.2734 232.973 14.3555 231.957 13.5352C230.941 12.6758 229.672 11.9531 228.148 11.3672C226.625 10.7812 224.906 10.332 222.992 10.0195C221.078 9.66797 219.008 9.49219 216.781 9.49219C213.344 9.49219 210.141 9.82422 207.172 10.4883C204.242 11.1133 201.645 12.0313 199.379 13.2422C197.152 14.4141 195.316 15.8398 193.871 17.5195C192.426 19.1602 191.488 20.9961 191.059 23.0273C190.629 25.0586 190.785 26.9141 191.527 28.5938C192.27 30.2344 193.5 31.6602 195.219 32.8711C196.977 34.043 199.184 34.9609 201.84 35.625C204.535 36.25 207.602 36.5625 211.039 36.5625C215.766 36.5625 219.535 36.4062 222.348 36.0938C225.16 35.7422 226.957 35.293 227.738 34.7461L229.203 27.9492H205.004L206.938 18.8672ZM254.574 29.4727C254.887 30.5273 255.59 31.4648 256.684 32.2852C257.816 33.0664 259.281 33.7305 261.078 34.2773C262.875 34.7852 264.965 35.1758 267.348 35.4492C269.77 35.7227 272.406 35.8594 275.258 35.8594C280.453 35.8594 284.418 35.6055 287.152 35.0977C289.887 34.5898 291.332 33.9062 291.488 33.0469C291.918 31.0156 290.59 29.5898 287.504 28.7695C284.457 27.9102 279.652 27.6562 273.09 28.0078C263.754 28.4766 257.016 27.4805 252.875 25.0195C248.773 22.5195 247.309 18.5547 248.48 13.125C248.871 11.2109 249.867 9.49219 251.469 7.96875C253.07 6.40625 255.141 5.07812 257.68 3.98438C260.258 2.85156 263.227 1.99219 266.586 1.40625C269.984 0.78125 273.676 0.46875 277.66 0.46875C281.293 0.46875 284.691 0.625 287.855 0.9375C291.02 1.21094 293.871 1.64062 296.41 2.22656C298.949 2.77344 301.117 3.47656 302.914 4.33594C304.75 5.15625 306.117 6.13281 307.016 7.26562C307.055 7.34375 307.074 7.40234 307.074 7.44141C307.113 7.48047 307.172 7.53906 307.25 7.61719L297.875 14.707C297.406 14.0039 296.508 13.3789 295.18 12.832C293.891 12.2852 292.27 11.8359 290.316 11.4844C288.402 11.0938 286.176 10.8203 283.637 10.6641C281.137 10.4687 278.441 10.3711 275.551 10.3711C273.324 10.3711 271.273 10.4102 269.398 10.4883C267.523 10.5664 265.902 10.6836 264.535 10.8398C263.207 10.957 262.152 11.1133 261.371 11.3086C260.629 11.5039 260.238 11.7188 260.199 11.9531C259.77 13.9063 261.078 15.293 264.125 16.1133C267.211 16.8945 271.977 17.1094 278.422 16.7578C287.719 16.2891 294.398 17.3828 298.461 20.0391C302.523 22.6953 303.949 26.8945 302.738 32.6367C302.309 34.5898 301.352 36.3672 299.867 37.9688C298.422 39.5312 296.449 40.8789 293.949 42.0117C291.488 43.1445 288.52 44.0234 285.043 44.6484C281.566 45.2734 277.621 45.5859 273.207 45.5859C269.301 45.5859 265.668 45.3906 262.309 45C258.949 44.6484 256 44.1016 253.461 43.3594C250.922 42.5781 248.812 41.6406 247.133 40.5469C245.492 39.4141 244.418 38.125 243.91 36.6797C243.871 36.6016 243.852 36.5039 243.852 36.3867C243.852 36.2695 243.812 36.1719 243.734 36.0938L254.574 29.4727ZM320.316 1.05469L320.375 1.11328C320.414 1.11328 320.453 1.13281 320.492 1.17188C320.531 1.25 320.551 1.28906 320.551 1.28906V1.34766L333.383 17.8711L353.188 1.34766L353.305 1.28906C353.344 1.25 353.363 1.21094 353.363 1.17188C353.441 1.13281 353.48 1.11328 353.48 1.11328L353.539 1.05469H366.547C366.625 1.05469 366.586 1.09375 366.43 1.17188C366.391 1.25 366.371 1.28906 366.371 1.28906L366.254 1.34766H366.195L337.25 25.6641L333.148 45H322.074L326.176 25.6641L307.25 1.05469H320.316Z\" fill=\"white\"><\/path>\n<\/svg>",
+          "logo_width": 140,
+          "logo_width_mobile": 140,
+          "menu": "main-menu",
+          "enable_contact_links": true,
+          "dropdown_animation_type": "elastic",
+          "enable_predictive_search": true,
+          "transparent": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "3a7b51d5-1527-4f13-8bad-3765962dcfa2": {
+            "type": "menu",
+            "settings": {
+              "title": "",
+              "url": "",
+              "menu": "footer"
+            }
+          },
+          "f4c973c8-0b10-487a-a4cc-a602f7440aca": {
+            "type": "textual",
+            "settings": {
+              "title": "Contact",
+              "text": "<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"
+            }
+          },
+          "920f08a5-a221-4bda-a38a-6d0a83ebfab6": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter",
+              "text": "Add descriptive text to invite your users to sign up for your newsletter.",
+              "show_privacy_note": true,
+              "enable_localization": true
+            }
+          }
+        },
+        "block_order": [
+          "3a7b51d5-1527-4f13-8bad-3765962dcfa2",
+          "f4c973c8-0b10-487a-a4cc-a602f7440aca",
+          "920f08a5-a221-4bda-a38a-6d0a83ebfab6"
+        ],
+        "settings": {
+          "style": "style-2",
+          "fullwidth": false,
+          "show_payment_icons": true,
+          "logo_svg_code": "<svg width=\"140\" height=\"46\" viewbox=\"0 0 367 46\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M10.1797 1.05469H21.3125L13.9297 35.9766H54.0664C54.0664 35.8984 54.1055 35.8984 54.1836 35.9766C54.3008 35.8984 54.3594 35.8984 54.3594 35.9766L52.4258 45H0.863281L10.1797 1.05469ZM62.7969 1.05469L62.8555 1.11328C62.8945 1.11328 62.9336 1.13281 62.9727 1.17188C63.0117 1.25 63.0312 1.28906 63.0312 1.28906V1.34766L75.8633 17.8711L95.668 1.34766L95.7852 1.28906C95.8242 1.25 95.8438 1.21094 95.8438 1.17188C95.9219 1.13281 95.9609 1.11328 95.9609 1.11328L96.0195 1.05469H109.027C109.105 1.05469 109.066 1.09375 108.91 1.17188C108.871 1.25 108.852 1.28906 108.852 1.28906L108.734 1.34766H108.676L79.7305 25.6641L75.6289 45H64.5547L68.6562 25.6641L49.7305 1.05469H62.7969ZM125.551 1.05469L158.891 37.9102L166.684 1.05469H177.758L168.441 45H150.746L120.043 11.0156L112.836 45H101.762L111.078 1.05469H125.551ZM206.938 18.8672H241.742L237.23 40.1367C234.926 41.7773 231.352 43.1055 226.508 44.1211C221.703 45.0977 215.902 45.5859 209.105 45.5859C203.91 45.5859 199.281 45.0586 195.219 44.0039C191.195 42.9102 187.855 41.3867 185.199 39.4336C182.582 37.4414 180.727 35.0586 179.633 32.2852C178.539 29.5117 178.363 26.4258 179.105 23.0273C179.809 19.6289 181.293 16.543 183.559 13.7695C185.824 10.9961 188.695 8.63281 192.172 6.67969C195.648 4.6875 199.633 3.16406 204.125 2.10938C208.656 1.01563 213.52 0.46875 218.715 0.46875C220.746 0.46875 223.012 0.585938 225.512 0.820312C228.051 1.05469 230.512 1.50391 232.895 2.16797C235.316 2.83203 237.484 3.75 239.398 4.92188C241.352 6.09375 242.758 7.61719 243.617 9.49219L234.008 16.2891C233.656 15.2734 232.973 14.3555 231.957 13.5352C230.941 12.6758 229.672 11.9531 228.148 11.3672C226.625 10.7812 224.906 10.332 222.992 10.0195C221.078 9.66797 219.008 9.49219 216.781 9.49219C213.344 9.49219 210.141 9.82422 207.172 10.4883C204.242 11.1133 201.645 12.0313 199.379 13.2422C197.152 14.4141 195.316 15.8398 193.871 17.5195C192.426 19.1602 191.488 20.9961 191.059 23.0273C190.629 25.0586 190.785 26.9141 191.527 28.5938C192.27 30.2344 193.5 31.6602 195.219 32.8711C196.977 34.043 199.184 34.9609 201.84 35.625C204.535 36.25 207.602 36.5625 211.039 36.5625C215.766 36.5625 219.535 36.4062 222.348 36.0938C225.16 35.7422 226.957 35.293 227.738 34.7461L229.203 27.9492H205.004L206.938 18.8672ZM254.574 29.4727C254.887 30.5273 255.59 31.4648 256.684 32.2852C257.816 33.0664 259.281 33.7305 261.078 34.2773C262.875 34.7852 264.965 35.1758 267.348 35.4492C269.77 35.7227 272.406 35.8594 275.258 35.8594C280.453 35.8594 284.418 35.6055 287.152 35.0977C289.887 34.5898 291.332 33.9062 291.488 33.0469C291.918 31.0156 290.59 29.5898 287.504 28.7695C284.457 27.9102 279.652 27.6562 273.09 28.0078C263.754 28.4766 257.016 27.4805 252.875 25.0195C248.773 22.5195 247.309 18.5547 248.48 13.125C248.871 11.2109 249.867 9.49219 251.469 7.96875C253.07 6.40625 255.141 5.07812 257.68 3.98438C260.258 2.85156 263.227 1.99219 266.586 1.40625C269.984 0.78125 273.676 0.46875 277.66 0.46875C281.293 0.46875 284.691 0.625 287.855 0.9375C291.02 1.21094 293.871 1.64062 296.41 2.22656C298.949 2.77344 301.117 3.47656 302.914 4.33594C304.75 5.15625 306.117 6.13281 307.016 7.26562C307.055 7.34375 307.074 7.40234 307.074 7.44141C307.113 7.48047 307.172 7.53906 307.25 7.61719L297.875 14.707C297.406 14.0039 296.508 13.3789 295.18 12.832C293.891 12.2852 292.27 11.8359 290.316 11.4844C288.402 11.0938 286.176 10.8203 283.637 10.6641C281.137 10.4687 278.441 10.3711 275.551 10.3711C273.324 10.3711 271.273 10.4102 269.398 10.4883C267.523 10.5664 265.902 10.6836 264.535 10.8398C263.207 10.957 262.152 11.1133 261.371 11.3086C260.629 11.5039 260.238 11.7188 260.199 11.9531C259.77 13.9063 261.078 15.293 264.125 16.1133C267.211 16.8945 271.977 17.1094 278.422 16.7578C287.719 16.2891 294.398 17.3828 298.461 20.0391C302.523 22.6953 303.949 26.8945 302.738 32.6367C302.309 34.5898 301.352 36.3672 299.867 37.9688C298.422 39.5312 296.449 40.8789 293.949 42.0117C291.488 43.1445 288.52 44.0234 285.043 44.6484C281.566 45.2734 277.621 45.5859 273.207 45.5859C269.301 45.5859 265.668 45.3906 262.309 45C258.949 44.6484 256 44.1016 253.461 43.3594C250.922 42.5781 248.812 41.6406 247.133 40.5469C245.492 39.4141 244.418 38.125 243.91 36.6797C243.871 36.6016 243.852 36.5039 243.852 36.3867C243.852 36.2695 243.812 36.1719 243.734 36.0938L254.574 29.4727ZM320.316 1.05469L320.375 1.11328C320.414 1.11328 320.453 1.13281 320.492 1.17188C320.531 1.25 320.551 1.28906 320.551 1.28906V1.34766L333.383 17.8711L353.188 1.34766L353.305 1.28906C353.344 1.25 353.363 1.21094 353.363 1.17188C353.441 1.13281 353.48 1.11328 353.48 1.11328L353.539 1.05469H366.547C366.625 1.05469 366.586 1.09375 366.43 1.17188C366.391 1.25 366.371 1.28906 366.371 1.28906L366.254 1.34766H366.195L337.25 25.6641L333.148 45H322.074L326.176 25.6641L307.25 1.05469H320.316Z\" fill=\"white\"><\/path>\n<\/svg>",
+          "below_logo_text": "Share information about your brand with your customers."
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "6de734d5-cb1e-4e69-bec4-65997d16bcf0": {
+            "type": "content_item",
+            "settings": {
+              "title": "<p>Announcement text here<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "6de734d5-cb1e-4e69-bec4-65997d16bcf0"
+        ],
+        "settings": {
+          "style": "style-2",
+          "enable": true,
+          "enable_localization": true,
+          "enable_close": true,
+          "enable_contact_links": true,
+          "content_horizontal_alignment": "center",
+          "type": "loop"
+        }
+      },
+      "usp": {
+        "type": "usp",
+        "blocks": {
+          "e74fe601-9011-42c0-8520-0c212d1f543f": {
+            "type": "item",
+            "settings": {
+              "title": "Free Shipping",
+              "text": "International shipping available for all orders over $50",
+              "icon_type": "truck"
+            }
+          },
+          "9b3566de-424e-43f5-ae1c-b62f5e4e3b70": {
+            "type": "item",
+            "settings": {
+              "title": "Buy Now. Pay Later",
+              "text": "0% Interest financing available. Pay after 30 days",
+              "icon_type": "card"
+            }
+          },
+          "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c": {
+            "type": "item",
+            "settings": {
+              "title": "Cashback Reward",
+              "text": "Collect & Redeem on every order that you purchased",
+              "icon_type": "cash"
+            }
+          },
+          "c3aab198-4c9d-47a3-8ecf-8a5c524ce677": {
+            "type": "item",
+            "settings": {
+              "title": "Secure Payments",
+              "text": "Guarantee 100% secure payments online on our website",
+              "icon_type": "shield-check"
+            }
+          }
+        },
+        "block_order": [
+          "e74fe601-9011-42c0-8520-0c212d1f543f",
+          "9b3566de-424e-43f5-ae1c-b62f5e4e3b70",
+          "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c",
+          "c3aab198-4c9d-47a3-8ecf-8a5c524ce677"
+        ],
+        "settings": {
+          "style": "style-1"
+        }
+      },
+      "quickview": {
+        "type": "quickview",
+        "blocks": {
+          "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "914ecbd9-75e8-4f25-8779-c2232b60c370": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "0afd551e-d254-4ff0-8700-e97340d3cb09": {
+            "type": "variant-selector",
+            "settings": {
+            }
+          },
+          "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac": {
+            "type": "quantity-input",
+            "settings": {
+            }
+          },
+          "b5991802-fdf6-4638-bfd9-d7a11f98b493": {
+            "type": "buy-buttons",
+            "settings": {
+              "show_dynamic_checkout": true
+            }
+          }
+        },
+        "block_order": [
+          "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68",
+          "914ecbd9-75e8-4f25-8779-c2232b60c370",
+          "0afd551e-d254-4ff0-8700-e97340d3cb09",
+          "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac",
+          "b5991802-fdf6-4638-bfd9-d7a11f98b493"
+        ],
+        "settings": {
+          "style": "style-1"
+        }
+      },
+      "gift-card": {
+        "type": "gift-card",
+        "settings": {
+          "style": "style-1",
+          "header_logo_image": "{{ shop.brand.logo }}",
+          "background_image": "shopify:\/\/shop_images\/DSC_2773_copy.jpg",
+          "logo_image": "{{ shop.brand.logo }}",
+          "logo_svg": ""
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "style": "style-1",
+          "logo": "{{ shop.brand.logo }}",
+          "logo_width": 150,
+          "logo_width_mobile": 150
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "style": "style-1"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Marble": {
+      "style_2_headings_accent_color": "#ffffff",
+      "type_header_font": "harmonia_sans_n7",
+      "type_body_font": "harmonia_sans_n4",
+      "enable_localization": true,
+      "phone": "+123456",
+      "email": "email@example.com",
+      "show_currency_codes": false,
+      "enable_cart_shipping_bar": false,
+      "cart_shipping_bar_threshold": 100,
+      "cart_shipping_bar_progress_text": "You are [amount] away from Free Shipping",
+      "cart_shipping_bar_success_text": "Congratulations! You're eligible for free shipping!",
+      "cart_shipping_bar_empty_text": "Spend $100 USD and get free shipping!",
+      "enable_cart_upsell": true,
+      "cart_upsell_title": "You might also like",
+      "cart_empty_upsell_title": "You might like",
+      "cart_empty_upsell_product_list": [
+
+      ],
+      "cart_upsell_use_recommendations_api": true,
+      "additional_checkout_buttons": true,
+      "enable_terms": false,
+      "show_payment_icons": true,
+      "enable_message": true,
+      "wrap_product": "",
+      "enable_images_filtering": false,
+      "card_product_swap_image_on_hover": true,
+      "card_product_media_size": "portrait",
+      "card_product_media_crop": true,
+      "card_product_image_alignment": "center",
+      "swatches_hex_codes": "",
+      "swatches_use_image_assets": false,
+      "sections": {
+        "cookie-banner": {
+          "type": "cookie-banner",
+          "settings": {
+            "style": "style-1",
+            "show_in_editor": false,
+            "disable": false,
+            "heading": "We use cookies",
+            "text": "<p>We use cookies to improve user experience and analyze website traffic.<\/p>",
+            "accept_button_text": "Accept",
+            "close_button_text": "Close"
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {
+            "style": "style-1",
+            "show_in_editor": false,
+            "enable": true,
+            "delay": 10,
+            "logo_width": 150,
+            "logo_width_mobile": 150,
+            "subheading": "Add a tagline",
+            "title": "Subscribe to newsletter",
+            "entry": "<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>",
+            "image_position": "right",
+            "form_code": ""
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "style": "style-2",
+            "logo_position": "center",
+            "logo_svg_code": "",
+            "logo_width": 170,
+            "logo_width_mobile": 170,
+            "menu": "main-menu",
+            "dropdown_animation_type": "elastic",
+            "enable_predictive_search": true,
+            "transparent": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "3a7b51d5-1527-4f13-8bad-3765962dcfa2": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "f4c973c8-0b10-487a-a4cc-a602f7440aca": {
+              "type": "textual",
+              "settings": {
+                "title": "Contact",
+                "text": "<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"
+              }
+            },
+            "920f08a5-a221-4bda-a38a-6d0a83ebfab6": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "text": "Add descriptive text to invite your users to sign up for your newsletter.",
+                "show_privacy_note": true,
+                "enable_localization": true
+              }
+            }
+          },
+          "block_order": [
+            "3a7b51d5-1527-4f13-8bad-3765962dcfa2",
+            "f4c973c8-0b10-487a-a4cc-a602f7440aca",
+            "920f08a5-a221-4bda-a38a-6d0a83ebfab6"
+          ],
+          "settings": {
+            "style": "style-2",
+            "fullwidth": false,
+            "show_payment_icons": true,
+            "logo_svg_code": "",
+            "below_logo_text": "Share information about your brand with your customers."
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "6de734d5-cb1e-4e69-bec4-65997d16bcf0": {
+              "type": "content_item",
+              "settings": {
+                "title": "<p>Announcement text here<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "6de734d5-cb1e-4e69-bec4-65997d16bcf0"
+          ],
+          "settings": {
+            "style": "style-2",
+            "enable": true,
+            "enable_localization": true,
+            "enable_close": true,
+            "enable_contact_links": true,
+            "content_horizontal_alignment": "center",
+            "type": "loop"
+          }
+        },
+        "usp": {
+          "type": "usp",
+          "blocks": {
+            "e74fe601-9011-42c0-8520-0c212d1f543f": {
+              "type": "item",
+              "settings": {
+                "title": "Free Shipping",
+                "text": "International shipping available for all orders over $50",
+                "icon_type": "truck"
+              }
+            },
+            "9b3566de-424e-43f5-ae1c-b62f5e4e3b70": {
+              "type": "item",
+              "settings": {
+                "title": "Buy Now. Pay Later",
+                "text": "0% Interest financing available. Pay after 30 days",
+                "icon_type": "card"
+              }
+            },
+            "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c": {
+              "type": "item",
+              "settings": {
+                "title": "Cashback Reward",
+                "text": "Collect & Redeem on every order that you purchased",
+                "icon_type": "cash"
+              }
+            },
+            "c3aab198-4c9d-47a3-8ecf-8a5c524ce677": {
+              "type": "item",
+              "settings": {
+                "title": "Secure Payments",
+                "text": "Guarantee 100% secure payments online on our website",
+                "icon_type": "shield-check"
+              }
+            }
+          },
+          "block_order": [
+            "e74fe601-9011-42c0-8520-0c212d1f543f",
+            "9b3566de-424e-43f5-ae1c-b62f5e4e3b70",
+            "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c",
+            "c3aab198-4c9d-47a3-8ecf-8a5c524ce677"
+          ],
+          "settings": {
+            "style": "style-1"
+          }
+        },
+        "quickview": {
+          "type": "quickview",
+          "blocks": {
+            "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68": {
+              "type": "title",
+              "settings": {
+              }
+            },
+            "914ecbd9-75e8-4f25-8779-c2232b60c370": {
+              "type": "price",
+              "settings": {
+              }
+            },
+            "0afd551e-d254-4ff0-8700-e97340d3cb09": {
+              "type": "variant-selector",
+              "settings": {
+              }
+            },
+            "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac": {
+              "type": "quantity-input",
+              "settings": {
+              }
+            },
+            "b5991802-fdf6-4638-bfd9-d7a11f98b493": {
+              "type": "buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": true
+              }
+            }
+          },
+          "block_order": [
+            "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68",
+            "914ecbd9-75e8-4f25-8779-c2232b60c370",
+            "0afd551e-d254-4ff0-8700-e97340d3cb09",
+            "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac",
+            "b5991802-fdf6-4638-bfd9-d7a11f98b493"
+          ],
+          "settings": {
+            "style": "style-1"
+          }
+        },
+        "gift-card": {
+          "type": "gift-card",
+          "settings": {
+            "style": "style-1",
+            "header_logo_image": "{{ shop.brand.logo }}",
+            "background_image": "shopify:\/\/shop_images\/DSC_2773_copy.jpg",
+            "logo_image": "{{ shop.brand.logo }}",
+            "logo_svg": ""
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "style": "style-1",
+            "logo": "{{ shop.brand.logo }}",
+            "logo_width": 150,
+            "logo_width_mobile": 150
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "style": "style-1"
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    },
+    "ARDA": {
+      "style_1_sliders_paging_color": "#074a42",
+      "style_1_badge_background_color": "#000000",
+      "style_1_badge_sale_background_color": "#579c94",
+      "style_1_progress_bar_color": "#074a42",
+      "style_2_background_color": "#074a42",
+      "style_2_headings_accent_color": "#ffffff",
+      "style_2_buttons_solid_color": "#074a42",
+      "style_2_sliders_actions_color": "#074a42",
+      "style_2_seperators_color": "#0f5c53",
+      "style_2_badge_color": "#074a42",
+      "style_2_input_background_color": "#106056",
+      "style_3_background_color": "#f8f7f4",
+      "style_3_foreground_color": "#000000",
+      "style_3_headings_color": "#000000",
+      "style_3_headings_accent_color": "#000000",
+      "style_3_paragraphs_color": "#000000",
+      "style_3_buttons_solid_background_color": "#000000",
+      "style_3_buttons_outline_color": "#000000",
+      "style_3_buttons_links_color": "#000000",
+      "style_3_sliders_paging_color": "#000",
+      "style_3_sliders_actions_background_color": "#000",
+      "type_header_font": "basic_commercial_n4",
+      "type_body_font": "basic_commercial_n4",
+      "buttons_border_radius": 50,
+      "boxed_items_round_corners": true,
+      "featured_cards_round_corners": true,
+      "enable_localization": true,
+      "phone": "+123456",
+      "email": "email@example.com",
+      "show_currency_codes": false,
+      "cart_page_style": "style-1",
+      "cart_drawer_style": "style-2",
+      "enable_cart_shipping_bar": false,
+      "cart_shipping_bar_threshold": 100,
+      "cart_shipping_bar_progress_text": "You are [amount] away from Free Shipping",
+      "cart_shipping_bar_success_text": "Congratulations! You're eligible for free shipping!",
+      "cart_shipping_bar_empty_text": "Spend $100 USD and get free shipping!",
+      "enable_cart_upsell": true,
+      "cart_upsell_title": "You might also like",
+      "cart_empty_upsell_title": "You might like",
+      "cart_empty_upsell_product_list": [
+
+      ],
+      "cart_upsell_use_recommendations_api": true,
+      "additional_checkout_buttons": true,
+      "enable_terms": false,
+      "show_payment_icons": true,
+      "enable_message": true,
+      "wrap_product": "",
+      "enable_images_filtering": false,
+      "badges_border_radius": 5,
+      "card_product_round_corners": true,
+      "card_product_swap_image_on_hover": true,
+      "card_product_media_size": "portrait",
+      "card_product_media_crop": true,
+      "card_product_image_alignment": "center",
+      "swatches_hex_codes": "",
+      "swatches_use_image_assets": false,
+      "sections": {
+        "cookie-banner": {
+          "type": "cookie-banner",
+          "settings": {
+            "style": "style-1",
+            "show_in_editor": false,
+            "disable": false,
+            "heading": "We use cookies",
+            "text": "<p>We use cookies to improve user experience and analyze website traffic.<\/p>",
+            "accept_button_text": "Accept",
+            "close_button_text": "Close"
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {
+            "style": "style-1",
+            "show_in_editor": false,
+            "enable": true,
+            "delay": 10,
+            "logo_width": 150,
+            "logo_width_mobile": 150,
+            "subheading": "Add a tagline",
+            "title": "Subscribe to newsletter",
+            "entry": "<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>",
+            "image_position": "right",
+            "form_code": ""
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "style": "style-2",
+            "logo_position": "center",
+            "logo_svg_code": "",
+            "logo_width": 170,
+            "logo_width_mobile": 170,
+            "menu": "main-menu",
+            "dropdown_animation_type": "elastic",
+            "enable_predictive_search": true,
+            "transparent": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "3a7b51d5-1527-4f13-8bad-3765962dcfa2": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "f4c973c8-0b10-487a-a4cc-a602f7440aca": {
+              "type": "textual",
+              "settings": {
+                "title": "Contact",
+                "text": "<p>Share your contact information like:<\/p><p>+<a href=\"tel:00825614334\" title=\"tel:00825614334\">123456789<\/a><\/p><p><a href=\"mailto:support@marble.com\" title=\"mailto:youremail@example.com\">youremail@example.com<\/a><\/p>"
+              }
+            },
+            "920f08a5-a221-4bda-a38a-6d0a83ebfab6": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "text": "Add descriptive text to invite your users to sign up for your newsletter.",
+                "show_privacy_note": true,
+                "enable_localization": true
+              }
+            }
+          },
+          "block_order": [
+            "3a7b51d5-1527-4f13-8bad-3765962dcfa2",
+            "f4c973c8-0b10-487a-a4cc-a602f7440aca",
+            "920f08a5-a221-4bda-a38a-6d0a83ebfab6"
+          ],
+          "settings": {
+            "style": "style-2",
+            "fullwidth": false,
+            "show_payment_icons": true,
+            "logo_svg_code": "",
+            "below_logo_text": "Share information about your brand with your customers."
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "6de734d5-cb1e-4e69-bec4-65997d16bcf0": {
+              "type": "content_item",
+              "settings": {
+                "title": "<p>Announcement text here<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "6de734d5-cb1e-4e69-bec4-65997d16bcf0"
+          ],
+          "settings": {
+            "style": "style-2",
+            "enable": true,
+            "enable_localization": true,
+            "enable_close": true,
+            "enable_contact_links": true,
+            "content_horizontal_alignment": "center",
+            "type": "loop"
+          }
+        },
+        "usp": {
+          "type": "usp",
+          "blocks": {
+            "e74fe601-9011-42c0-8520-0c212d1f543f": {
+              "type": "item",
+              "settings": {
+                "title": "Free Shipping",
+                "text": "International shipping available for all orders over $50",
+                "icon_type": "truck"
+              }
+            },
+            "9b3566de-424e-43f5-ae1c-b62f5e4e3b70": {
+              "type": "item",
+              "settings": {
+                "title": "Buy Now. Pay Later",
+                "text": "0% Interest financing available. Pay after 30 days",
+                "icon_type": "card"
+              }
+            },
+            "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c": {
+              "type": "item",
+              "settings": {
+                "title": "Cashback Reward",
+                "text": "Collect & Redeem on every order that you purchased",
+                "icon_type": "cash"
+              }
+            },
+            "c3aab198-4c9d-47a3-8ecf-8a5c524ce677": {
+              "type": "item",
+              "settings": {
+                "title": "Secure Payments",
+                "text": "Guarantee 100% secure payments online on our website",
+                "icon_type": "shield-check"
+              }
+            }
+          },
+          "block_order": [
+            "e74fe601-9011-42c0-8520-0c212d1f543f",
+            "9b3566de-424e-43f5-ae1c-b62f5e4e3b70",
+            "5b0628ee-9d54-43a3-8cfc-4e7b2b61820c",
+            "c3aab198-4c9d-47a3-8ecf-8a5c524ce677"
+          ],
+          "settings": {
+            "style": "style-1"
+          }
+        },
+        "quickview": {
+          "type": "quickview",
+          "blocks": {
+            "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68": {
+              "type": "title",
+              "settings": {
+              }
+            },
+            "914ecbd9-75e8-4f25-8779-c2232b60c370": {
+              "type": "price",
+              "settings": {
+              }
+            },
+            "0afd551e-d254-4ff0-8700-e97340d3cb09": {
+              "type": "variant-selector",
+              "settings": {
+              }
+            },
+            "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac": {
+              "type": "quantity-input",
+              "settings": {
+              }
+            },
+            "b5991802-fdf6-4638-bfd9-d7a11f98b493": {
+              "type": "buy-buttons",
+              "settings": {
+                "show_dynamic_checkout": true
+              }
+            }
+          },
+          "block_order": [
+            "61b1ed02-d2be-4d9d-9ce9-70fd971a7a68",
+            "914ecbd9-75e8-4f25-8779-c2232b60c370",
+            "0afd551e-d254-4ff0-8700-e97340d3cb09",
+            "0b8fa6ac-c9f1-4cb8-a23b-1b74ee24e2ac",
+            "b5991802-fdf6-4638-bfd9-d7a11f98b493"
+          ],
+          "settings": {
+            "style": "style-1"
+          }
+        },
+        "gift-card": {
+          "type": "gift-card",
+          "settings": {
+            "style": "style-1",
+            "header_logo_image": "{{ shop.brand.logo }}",
+            "background_image": "shopify:\/\/shop_images\/DSC_2773_copy.jpg",
+            "logo_image": "{{ shop.brand.logo }}",
+            "logo_svg": ""
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "style": "style-1",
+            "logo": "{{ shop.brand.logo }}",
+            "logo_width": 150,
+            "logo_width_mobile": 150
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "style": "style-1"
+          }
+        }
+      },
+      "content_for_index": [
+
+      ]
+    }
+  }
+}
