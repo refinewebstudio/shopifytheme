@@ -1,0 +1,182 @@
+<section class="card-grid spacer-t-m--large spacer-b-m--large color-headings color-background color-{{- section.settings.style -}}">
+  <div class="container pt-l pb-l pt-0--large pb-0--large">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="h3 center mt-0 mb-m">{{- section.settings.heading | replace: '</p><p>', '<br />' | replace: '<p>', '' | replace: '</p>', '' -}}</h2><!-- /.h3 -->
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="grid grid--row-gap-s">
+        {%- for block in section.blocks -%}
+          {%-
+            liquid
+            assign grid_column_space = 12 | divided_by: section.blocks.size
+            if section.blocks.size > 4
+              assign grid_column_space = 4
+            endif
+          -%}
+          <div class="card-grid__item grid__item grid__item--xs-6 grid__item--s-{{ grid_column_space }} center pb-s--large" {{ block.shopify_attributes }}>
+            {%- if block.settings.url != blank -%}
+              <a href="{{- block.settings.url -}}" class="media media--3-4 media--fit-contain">
+            {%- else -%}
+              <div class="media media--3-4 media--fit-contain">
+            {%- endif -%}
+
+            {%- if block.settings.image != blank -%}
+              {%-
+                liquid
+                assign image_src = block.settings.image | image_url: width: 640
+                render 'image' src: image_src
+              -%}
+            {%- else -%}
+              {{- 'image' | placeholder_svg_tag -}}
+            {%- endif -%}
+
+            {%- if block.settings.url != blank -%}
+              </a>
+            {%- else -%}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.subheading != blank -%}
+              <p class="sh sh--4 mt-s mb-xs">{{- block.settings.subheading | escape | newline_to_br -}}</p><!-- /.sh sh--4 -->
+            {%- endif -%}
+
+            {%- if block.settings.heading != blank -%}
+              <h3 class="h4 mt-0 mb-xs">{{- block.settings.heading | replace: '</p><p>', '<br />' | replace: '<p>', '' | replace: '</p>', '' -}}</h3><!-- /.h4 -->
+            {%- endif -%}
+
+            {%- if block.settings.paragraph != blank -%}
+              <p class="p4 mt-0 mb-0 color-paragraphs">{{- block.settings.paragraph | escape | newline_to_br -}}</p><!-- /.p4 -->
+            {%- endif -%}
+          </div><!-- /.card-grid__item -->
+        {%- endfor -%}
+      </div><!-- /.grid -->
+    {%- endif -%}
+  </div><!-- /.container -->
+</section><!-- /.card-grid -->
+
+{% schema %}
+{
+  "name": "t:sections.card-grid.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "spacing_desktop",
+      "label": "t:sections.global.settings.spacing.label",
+      "options": [
+        {
+          "value": "mt-0--large mb-0--large",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs--large mb-xs--large",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s--large mb-s--large",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-0--large mb-0--large"
+    },
+    {
+      "type": "select",
+      "id": "spacing_mobile",
+      "label": "t:sections.global.settings.spacing.label_mobile",
+      "options": [
+        {
+          "value": "mt-0 mb-0",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs mb-xs",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s mb-s",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-0 mb-0"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:sections.global.settings.heading.label",
+      "default": "<p>Heading <em>with accent <strong>element</strong></em></p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_item",
+      "name": "t:sections.card-grid.blocks.card-item.name",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:sections.global.settings.url.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.global.settings.image.label"
+        },
+        {
+          "type": "textarea",
+          "id": "subheading",
+          "label": "t:sections.global.settings.subheading.label",
+          "default": "Add a tagline"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:sections.global.settings.heading.label",
+          "default": "<p>Heading</p>"
+        },
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "t:sections.global.settings.paragraph.label",
+          "default": "Add a short description here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.card-grid.name",
+      "blocks": [
+        {
+          "type": "card_item"
+        },
+        {
+          "type": "card_item"
+        },
+        {
+          "type": "card_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

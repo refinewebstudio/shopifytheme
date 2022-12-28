@@ -1,0 +1,34 @@
+@media screen and (min-width: 990px) {
+  .section-image-with-text--fullwidth {
+    position: relative;
+  }
+
+  .section-image-with-text--fullwidth .section__media {
+    position: static;
+  }
+
+  .section-image-with-text--fullwidth .section__media img,
+  .section-image-with-text--fullwidth .section__media .media__loader {
+    transform-origin: 0 0;
+    width: 50%;
+  }
+
+  .section-image-with-text--fullwidth .section__media svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+  }
+
+  .section-image-with-text--fullwidth.section-image-with-text--flipped
+    .section__media
+    img,
+  .section-image-with-text--fullwidth.section-image-with-text--flipped
+    .section__media
+    svg,
+  .section-image-with-text--fullwidth.section-image-with-text--flipped
+    .section__media
+    .media__loader {
+    left: 50%;
+  }
+}

@@ -1,0 +1,64 @@
+{%- assign style_classes = section.settings.spacing_mobile | append: ' ' | append: section.settings.spacing_desktop -%}
+
+<section class="section-{{ section.id }} {{ style_classes }}">
+  {{- section.settings.custom_liquid -}}
+</section><!-- /.section -->
+
+{% schema %}
+{
+  "name": "t:sections.custom-liquid.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "spacing_desktop",
+      "label": "t:sections.global.settings.spacing.label",
+      "options": [
+        {
+          "value": "mt-0--large mb-0--large",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs--large mb-xs--large",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s--large mb-s--large",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s--large mb-s--large"
+    },
+    {
+      "type": "select",
+      "id": "spacing_mobile",
+      "label": "t:sections.global.settings.spacing.label_mobile",
+      "options": [
+        {
+          "value": "mt-0 mb-0",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs mb-xs",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s mb-s",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s mb-s"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+      "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.custom-liquid.name"
+    }
+  ]
+}
+{% endschema %}

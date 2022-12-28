@@ -1,0 +1,24 @@
+.article-banner__time {
+  margin-left: auto;
+}
+
+.article-banner__avatar span {
+  font-size: 1rem;
+  background-color: var(--color-seperators);
+  color: var(--color-headings);
+  min-width: calc(var(--spacing-step) * 3);
+  min-height: calc(var(--spacing-step) * 3);
+  margin-right: var(--spacing-step);
+  border-radius: 50%;
+}
+
+@media (min-width: 990px) {
+  .article-banner__container.container--narrow {
+    padding-inline: 0;
+  }
+
+  .article-banner__container .article-banner__content,
+  .article-banner__container .article-banner__title {
+    padding-inline: calc(var(--spacing-step) * 2);
+  }
+}

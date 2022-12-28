@@ -1,0 +1,35 @@
+.accordion-item {
+  display: block;
+  border-bottom: 0.1rem solid var(--color-seperators);
+}
+
+.accordion-item summary:before,
+.accordion-item summary:after {
+  content: '';
+  background-color: currentColor;
+  width: 1rem;
+  height: 0.1rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.accordion-item summary:after {
+  transform: translate3d(0, -50%, 0) rotate(90deg);
+  transition: transform var(--duration-default) ease-in-out;
+}
+
+.accordion-item details.is-open summary:after {
+  transform: translate3d(0, -50%, 0) rotate(360deg);
+}
+
+.accordion-item summary + * {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-item details.is-open summary + * {
+  max-height: var(--max-height, auto);
+}

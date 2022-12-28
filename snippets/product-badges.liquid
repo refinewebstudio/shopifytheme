@@ -1,0 +1,35 @@
+{% comment %}
+    Renders a product badges
+
+    Accepts:
+    - product_ref: {Object} Product Liquid object
+    - class: {String} CSS class to apply to each badge
+
+    Usage:
+    {%- render 'product-badges', product_ref: product_ref, class: 'card-product__badge' -%}
+{% endcomment %}
+
+{%-
+  liquid
+  for tag in product_ref.tags
+    unless tag contains 'badge:'
+      continue
+    endunless
+    assign tag_text = tag | remove: 'badge:' | strip
+    echo '<span class="' | append: class | append: ' badge p4 bold">' | append: tag_text | append: '</span>'
+    break
+  endfor
+  assign product_created_days_offset_seconds = settings.product_created_days_offset | times: 86400
+  assign product_created_days_offset_seconds_difference = 'now' | date: '%s' | minus: product_created_days_offset_seconds
+  assign product_created_seconds = product_ref.created_at | date: '%s' | plus: 0
+-%}
+
+{%- if product_created_days_offset_seconds_difference <= product_created_seconds -%}
+  <span class="{{ class }} badge badge--new p4 bold">{{- 'products.product.new' | t -}}</span>
+{%- endif -%}
+
+{%- if product_ref.available == false -%}
+  <span class="{{ class }} badge badge--sold-out p4 bold">{{- 'products.product.sold_out' | t -}}</span>
+{%- elsif product_ref.compare_at_price -%}
+  <span class="{{ class }} badge badge--sale p4 bold">{{- 'products.product.sale' | t -}}</span>
+{%- endif -%}

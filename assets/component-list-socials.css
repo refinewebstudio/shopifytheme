@@ -1,0 +1,21 @@
+.list-socials {
+  margin-bottom: calc(calc(var(--spacing-step) * 2) * -1);
+}
+
+.list-socials li {
+  margin-right: calc(var(--spacing-step));
+}
+
+.list-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(5.5 * var(--spacing-step));
+  min-height: calc(5.5 * var(--spacing-step));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .list-socials a:hover {
+    opacity: 0.7;
+  }
+}

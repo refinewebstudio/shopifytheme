@@ -1,0 +1,95 @@
+{%- comment -%}
+  Info:
+  Renders a swatch input
+
+  Accepts:
+  - swatch_id {String} An ID for the input/label
+  - swatch_value {String} Swatch value
+  - type {String} Input type
+  - name {String} Input name
+  - context {String} Context
+  - input_attr {String} HTML attributes for the input
+  - checked {Boolean} Input checked
+  - disabled {Boolean} Input disabled
+  - class {String} Swatch class
+  - swatch_type {String} Swatch type. Accepts: 'color', 'button'. Defaults to: 'color'
+  - size {String} The size of the swatch, when type is 'color'. Accepts: 'large'
+
+  Usage:
+{%- endcomment -%}
+
+{%-
+  liquid
+  assign swatch_id = swatch_id | default: ''
+  assign swatch_value = swatch_value | default: false
+  assign context = context | default: ''
+  assign input_attr = input_attr | default: false
+  assign type = type | default: 'radio'
+  assign swatch_type = swatch_type | default: 'color'
+  assign default_name = 'Product-Swatch-' | append: swatch_id | append: '--Context-' | append: context | append: '--' | append: swatch_type
+  assign name = name | default: default_name
+  assign checked = checked | default: false
+  assign swatch_value_downcased = swatch_value | downcase | replace: ' ', '-'
+  assign color_codes_array = settings.swatches_hex_codes | newline_to_br | strip_newlines | split: '<br />'
+  assign colors_keys = ''
+  for color in color_codes_array
+    assign color_name = color | split: '=' | first
+    assign colors_keys = colors_keys | append: color_name
+    unless forloop.last
+      assign colors_keys = colors_keys | append: ','
+    else
+      assign colors_keys = colors_keys | split: ','
+    endunless
+  endfor
+  assign class = class | default: 'swatch'
+  assign size = size | default: 'normal'
+-%}
+
+{%- if swatch_value -%}
+  <div class="{{- class -}}__holder">
+    <input
+      type="{{ type }}"
+      name="{{ name }}"
+      id="Product-Swatch-{{- swatch_id -}}--Context-{{- context -}}-Value--{{- swatch_value | handle -}}"
+      value="{{- swatch_value -}}"
+      class="visually-hidden"
+      {% if input_attr %}{{ input_attr }}{% endif %}
+      {% if checked %}checked{% endif %}
+      {% if disabled %}disabled{% endif %}
+    >
+
+    <label
+      for="Product-Swatch-{{- swatch_id -}}--Context-{{- context -}}-Value--{{- swatch_value | handle -}}"
+      class="{{ class }} {{ class }}--{{ swatch_value_downcased }} {{ class }}--{{ size }} motion-reduce"
+      aria-label="{{- swatch_value -}}"
+      focusable="false"
+    >
+      {%- if swatch_type == 'color' -%}
+        <span
+          class="{{ class }}__indicator"
+          {% unless colors_keys contains swatch_value %}
+            style=" background-color: {{ swatch_value_downcased | replace: '-', '' }};"
+          {% else %}
+          {%- assign color_codes = settings.swatches_hex_codes | newline_to_br | strip_newlines | split: '<br />' -%}
+          {%- for color_code in color_codes -%}
+            {%-
+              liquid
+
+              unless color_code contains swatch_value
+                continue
+              endunless
+              assign color_codes_swatch_value = color_code | split: swatch_value | last | remove_first: '='
+            -%}
+            {%- if color_codes_swatch_value contains '.' -%}
+              style="background-image: url({{ color_codes_swatch_value | file_img_url: '36x' }});"
+            {%- endif -%}
+            {%- break -%}
+          {%- endfor -%}
+          {% endunless %}
+        >{{- swatch_value -}}</span>
+      {%- else -%}
+        <span class="p3">{{- swatch_value -}}</span>
+      {%- endif -%}
+    </label>
+  </div>
+{%- endif -%}

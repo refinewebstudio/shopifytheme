@@ -1,0 +1,155 @@
+{%- if section.blocks.size > 0 -%}
+  <link rel="stylesheet" href="{{ 'section-usp.css' | asset_url }}" media="print" onload="this.media='all'">
+
+  <section class="usp usp--{{ section.settings.layout }} bd-t color-paragraphs color-background color-{{ section.settings.style }}">
+    <div class="container">
+      <ul class="grid list-unstyled">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.title == blank and block.settings.text == blank -%}
+            {%- continue -%}
+          {%- endif -%}
+
+          <li class="grid__item grid__item--xs-6 grid__item--s-{{- 12 | divided_by: section.blocks.size -}}">
+            <div class="usp__icon">
+              {% render 'icon-get', icon: block.settings.icon_type %}
+            </div><!-- /.usp__icon -->
+
+            <div class="usp__content">
+              {%- if block.settings.title != blank -%}
+                <h5 class="h6 mt-0 mb-xs color-headings">{{- block.settings.title | escape -}}</h5><!-- h6 mt-0 mb-xs color-headings -->
+              {%- endif -%}
+
+              {%- if block.settings.text != blank -%}
+                <p class="p4 mt-0 mb-0">{{- block.settings.text | escape -}}</p><!-- p4 mt-0 mb-0 -->
+              {%- endif -%}
+            </div><!-- /.usp__content -->
+          </li><!-- /.grid__item -->
+        {%- endfor -%}
+      </ul><!-- /.grid -->
+    </div><!-- /.container -->
+  </section><!-- /.usp bd-t color-paragraphs color-background -->
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.usp.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.usp.settings.layout.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.usp.settings.layout.options.option_1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.usp.settings.layout.options.option_"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.usp.blocks.item.name",
+      "type": "item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.usp.blocks.item.settings.title.label",
+          "default": "Promotional heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "t:sections.usp.blocks.item.settings.text.label",
+          "default": "Provide descriptive text, engaging your customers."
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "t:sections.usp.blocks.item.settings.icon_type.label",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_1"
+            },
+            {
+              "value": "truck",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_2"
+            },
+            {
+              "value": "card",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_3"
+            },
+            {
+              "value": "cash",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_4"
+            },
+            {
+              "value": "shield-check",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_5"
+            },
+            {
+              "value": "globe",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_6"
+            },
+            {
+              "value": "pin",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_7"
+            },
+            {
+              "value": "lock",
+              "label": "t:sections.usp.blocks.item.settings.icon_type.options.option_8"
+            }
+          ],
+          "default": "none"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.usp.name",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

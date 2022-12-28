@@ -1,0 +1,1 @@
+{"sections":{"main":{"type":"main-cart","settings":{}},"upsells":{"type":"main-cart-upsells","settings":{"style":"style-1","spacing_desktop":"mt-s--large mb-s--large","spacing_mobile":"mt-s mb-s","layout":"fullwidth","subheading":"Subheading","paragraph":"","autoplay":false,"autoplay_speed":5}}},"order":["main","upsells"]}

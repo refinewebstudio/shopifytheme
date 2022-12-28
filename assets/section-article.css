@@ -1,0 +1,12 @@
+.article {
+  margin-bottom: 6rem;
+}
+
+.article__foot {
+  margin-top: 6rem;
+}
+
+.article__comments {
+  line-height: 1.5;
+  border-bottom: 0.1rem solid var(--color-seperators);
+}

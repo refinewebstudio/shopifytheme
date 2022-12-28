@@ -1,0 +1,22 @@
+.faq__head {
+  padding-block: calc(var(--spacing-step) * 3);
+}
+
+.faq__body {
+  padding-bottom: calc(var(--spacing-step) * 14);
+}
+
+.faq__title {
+  padding-top: calc(var(--spacing-step) * 4);
+}
+
+@media (min-width: 750px) {
+  .faq__head {
+    padding-block: calc(var(--spacing-step) * 7);
+  }
+
+  .faq__nav {
+    position: sticky;
+    top: calc(var(--spacing-step) * 11);
+  }
+}

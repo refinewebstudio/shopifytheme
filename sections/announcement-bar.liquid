@@ -1,0 +1,185 @@
+{{- 'section-announcement-bar.css' | asset_url | stylesheet_tag: preload: true -}}
+{{- 'swiper-bundle.min.css' | asset_url | stylesheet_tag: preload: true -}}
+
+<script src="{{- 'swiper-bundle.min.js' | asset_url -}}" defer="defer"></script>
+<script src="{{- 'announcement-bar.js' | asset_url -}}" defer="defer"></script>
+
+{%- if section.settings.enable -%}
+  <announcement-bar
+    class="announcement-bar p4 color-{{ section.settings.style }} hidden {%- if section.blocks.size == 0 %} small-hide medium-hide{%- endif -%}"
+    data-slider-type="{{- section.settings.type -}}"
+  >
+    <div class="container container--fullwidth">
+      <div class="announcement-bar__inner {%- if section.settings.enable_contact_links == false and section.settings.content_horizontal_alignment == 'left' %} announcement-bar__inner--left{% endif %}{% if section.settings.enable_contact_links == false and settings.enable_localization == false %} announcement-bar__inner--full{% endif %}{%- if section.blocks.size == 0 %} announcement-bar__inner--no-content{% endif %}">
+        <div class="announcement-bar__links announcement-bar__utils p4 small-hide medium-hide">
+          {%- if section.settings.enable_contact_links -%}
+            {%- render 'contact-links' -%}
+          {%- endif -%}
+        </div><!-- /.announcement-bar__links announcement-bar__utils -->
+
+        {%- if section.blocks.size > 0 -%}
+          {%- capture content_class -%}
+            {{ section.settings.content_horizontal_alignment }}
+            {% if section.settings.type == 'controls' and section.blocks.size > 1 %} announcement-bar__content--has-arrows{% endif %}
+            {% if section.settings.enable_close %} announcement-bar__content--has-close{% endif %}
+          {%- endcapture -%}
+          <div class="announcement-bar__content {{ content_class }}">
+            <div class="swiper">
+              {%- if section.settings.type == 'controls' and section.blocks.size > 1 -%}
+                <div class="announcement-bar__arrows slider__arrows">
+                  <button class="announcement-bar__arrow announcement-bar__arrow--left" data-arrow-prev aria-label="{{- 'accessibility.previous' | t -}}">
+                    {%- render 'icon-chevron-left' -%}
+                  </button>
+
+                  <button class="announcement-bar__arrow announcement-bar__arrow--right" data-arrow-next aria-label="{{- 'accessibility.previous' | t -}}">
+                    {%- render 'icon-chevron-right' -%}
+                  </button>
+                </div><!-- /.announcement-bar__arrows slider__arrows -->
+              {%- endif -%}
+
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  {%- if block.settings.title == blank -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
+                  <div class="swiper-slide">
+                    {%- render 'text-content', paragraph_value: block.settings.title, paragraph_class: 'announcement-bar__item' -%}
+                  </div><!-- /.swiper-slide -->
+                {%- endfor -%}
+            </div><!-- /.swiper -->
+            </div><!-- /.swiper-wrapper -->
+          </div><!-- /.announcement-bar__content -->
+        {%- endif -%}
+
+        <div class="announcement-bar__utils announcement-bar__utils--right">
+          {%- if settings.enable_localization or section.settings.enable_close -%}
+            {%- if settings.enable_localization and section.settings.enable_localization -%}
+              <div class="announcement-bar__currency small-hide medium-hide">
+                <modal-opener class="no-js-hidden" data-modal="#Modal-Localization">
+                  <button type="button" aria-haspopup="dialog">
+                    {{ localization.country }} ({{ cart.currency.iso_code }} {{ cart.currency.symbol }})
+                  </button>
+                </modal-opener>
+              </div><!-- /.announcement-bar__currency -->
+            {%- endif -%}
+
+            {%- if section.settings.enable_close -%}
+              <button class="announcement-bar__close p4" data-close-button aria-label="{{- 'accessibility.close' | t -}}">
+                {%- render 'icon-close' -%}
+              </button>
+            {%- endif -%}
+          {%- endif -%}
+        </div><!-- /.announcement-bar__utils announcement-bar__utils--right -->
+      </div><!-- /.announcement-bar__inner -->
+    </div><!-- /.container container--fullwidth -->
+  </announcement-bar><!-- /.announcement-bar -->
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.announcement-bar.headers.general"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "t:sections.announcement-bar.settings.enable.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_localization",
+      "label": "t:sections.announcement-bar.settings.enable_localization.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_close",
+      "label": "t:sections.announcement-bar.settings.enable_close.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_contact_links",
+      "label": "t:sections.announcement-bar.settings.enable_contact_links.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.announcement-bar.headers.content"
+    },
+    {
+      "type": "select",
+      "id": "content_horizontal_alignment",
+      "label": "t:sections.announcement-bar.settings.content_horizontal_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.announcement-bar.settings.content_horizontal_alignment.options.option_1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.announcement-bar.settings.content_horizontal_alignment.options.option_2"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "type",
+      "label": "t:sections.announcement-bar.settings.type.label",
+      "options": [
+        {
+          "value": "loop",
+          "label": "t:sections.announcement-bar.settings.type.options.option_1"
+        },
+        {
+          "value": "controls",
+          "label": "t:sections.announcement-bar.settings.type.options.option_2"
+        }
+      ],
+      "default": "loop",
+      "info": "t:sections.announcement-bar.settings.type.info"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.announcement-bar.blocks.content_item.name",
+      "type": "content_item",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "t:sections.announcement-bar.blocks.content_item.settings.content.label",
+          "default": "<p>Announcement text here</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

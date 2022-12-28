@@ -1,0 +1,179 @@
+{% comment %}
+    Renders a product card
+    Accepts:
+    - product_ref: {Object} Product Liquid object
+    - current_variant: {Object} Product Variant liquid object
+    - collection_ref: {Object} Collection Liquid object
+    - class: {String} CSS class to apply to the card
+    - context: {String} Context from which the snippet is called. Defaults to section id.
+    Usage:
+    {%- render 'card-product', product_ref: product_ref -%}
+
+    Requires:
+    - component-card-product.css
+    - component-badge.css
+
+    - component-card-product.js
+{% endcomment %}
+
+{%-
+  liquid
+  assign variant_preselected = false
+  if current_variant
+    assign variant_preselected = true
+  endif
+  assign current_variant = current_variant | default: product_ref.variants[0]
+  assign product_url = current_variant.url | within: collection_ref
+  assign swatches_option = product_ref.options_by_name[settings.swatches_option]
+  assign context = context | default: section.id
+  assign media_size = settings.card_product_media_size
+  if media_size == 'aspect-ratio' and product_ref.featured_image == nil
+    assign media_size = '1-1'
+  endif
+  assign media_class = 'media media--no-hover media--' | append: media_size
+  if settings.card_product_media_crop == false
+    assign media_class = media_class | append: ' media--no-crop'
+  else
+    assign media_class = media_class | append: ' media--crop-' | append: settings.card_product_image_alignment
+  endif
+-%}
+
+<card-product class="card-product {{ class }}" data-product-url="{%- if collection_ref -%}/collections/{{- collection_ref.handle -}}{%- endif -%}/products/{{- product_ref.handle -}}" data-swatch-option-index="{{- swatches_option.position -}}" data-active-variant-id="{{- current_variant.id -}}">
+  <div class="card-product__main">
+    <a
+      {% if product_ref and product_ref != empty %}href="{{- product_url -}}"{% endif %}
+      class="card-product__media {{ media_class }}"
+      data-url
+      data-media
+      {% if settings.card_product_media_size == 'aspect-ratio' %}
+        style="padding-top: {%- render 'aspect-ratio', aspect_ratio: product_ref.featured_image.aspect_ratio -%}%;"
+      {% endif %}
+    >
+      {%- if product_ref and product_ref != empty -%}
+        <span class="visually-hidden">{{- product_ref.title | escape -}}</span>
+      {%- endif -%}
+
+      {%-
+        liquid
+        assign current_variant_image = product_ref.featured_media
+        if variant_preselected and current_variant.image
+          assign current_variant_image = current_variant.image
+        endif
+        if current_variant_image
+          assign image_src = current_variant_image | image_url: width: 500
+          capture image_srcset
+            render 'srcset', image: current_variant_image
+          endcapture
+          assign primary_image_attr = ''
+          if product_ref.images[1] and settings.card_product_swap_image_on_hover and variant_preselected == false
+            assign primary_image_attr = 'data-image-primary'
+          endif
+          assign image_alt = current_variant_image.alt | escape
+          render 'image', src: image_src, srcset: image_srcset, sizes: 'auto', alt: image_alt, width: current_variant_image.width, height: current_variant_image.height, attr: primary_image_attr
+
+          if product_ref.images[1] and settings.card_product_swap_image_on_hover and variant_preselected == false
+            assign image_secondary_src = product_ref.images[1] | image_url: width: 500
+            capture image_secondary_srcset
+              render 'srcset', image: product_ref.images[1]
+            endcapture
+            assign image_secondary_alt = product_ref.images[1].alt | escape
+            render 'image', src: image_secondary_src, srcset: image_secondary_srcset, sizes: 'auto', alt: image_secondary_alt, width: product_ref.images[1].width, height: product_ref.images[1].height, attr: 'data-image-secondary'
+          endif
+        else
+          echo 'image' | placeholder_svg_tag
+        endif
+      -%}
+    </a>
+
+    <div class="card-product__actions">
+      <div class="card-product__badges">
+        {%-
+          liquid
+          capture product_badges
+          render 'product-badges', product_ref: product_ref, class: 'card-product__badge'
+          endcapture
+          assign product_badges = product_badges | strip
+          echo product_badges
+        -%}
+      </div><!-- /.card-product__badges -->
+
+      {%- if settings.enable_quickview_desktop or settings.enable_quickview_mobile -%}
+        {%-
+          liquid
+          capture quickview_class
+            if settings.enable_quickview_desktop == false
+              echo 'medium-hide large-up-hide'
+            elsif settings.enable_quickview_mobile == false
+              echo 'small-hide'
+            endif
+          endcapture
+          assign no_js_button_class = 'card-product__button no-js ' | append: quickview_class
+        -%}
+        <div class="card-product__callout motion-reduce {{ quickview_class }}">
+          {%- assign callout_button_text = 'products.product.quickview.callout' | t -%}
+          {%- capture attr -%}
+            data-url="{{- product_url -}}"
+            data-quickview-callout
+          {%- endcapture -%}
+          <quickview-opener data-modal="#Product-Quickview-Modal-{{- product_ref.id -}}--quickview" class="no-js-hidden">
+            {%- render 'button', type: 'button', value: callout_button_text, fullwidth: true, styles: 's', class: 'card-product__button', icon_type: 'eye', icon_animation_alternate: true, attr: attr -%}
+          </quickview-opener>
+
+          {%- render 'button', type: 'link', href: product_url, value: callout_button_text, fullwidth: true, styles: 's', class: no_js_button_class, icon_type: 'eye', icon_animation_alternate: true, attr: attr -%}
+        </div><!-- /.card-product__callout -->
+      {%- endif -%}
+    </div><!-- /.card-product__actions -->
+  </div><!-- /.card-product__main -->
+
+  <div class="card-product__meta mt-s">
+    <h4 class="card-product__title h6 mt-0 mb-xs">
+      {%- if product_ref and product_ref != empty -%}
+        <a href="{{- product_url -}}" class="inline-unstyled-link" data-url>{{- product_ref.title | escape -}}</a>
+      {%- else -%}
+        {{- 'products.product.title' | t -}}
+      {%- endif -%}
+    </h4><!-- /.card-product__title h6 mt-0 mb-xs -->
+
+    <div class="card-product__price p3">
+      {%- render 'price', product_ref: product_ref, price_class: '', use_variant: true -%}
+    </div><!-- /.card-product__price p3 -->
+
+    {%- if swatches_option -%}
+      <ul class="card-product__swatches list-unstyled no-js-hidden" role="list">
+        {%- for value in swatches_option.values -%}
+          <li class="card-product__swatch">
+            {%-
+              liquid
+              assign swatch_option_position = swatches_option.position | minus: 1
+              assign swatch_checked = false
+              if value == current_variant.options[swatch_option_position]
+                assign swatch_checked = true
+              endif
+              render 'swatch', swatch_id: product_ref.id, swatch_value: value, context: context, checked: swatch_checked, input_attr: 'data-swatch'
+            -%}
+          </li><!-- /.card-product__swatch -->
+        {%- endfor -%}
+      </ul><!-- /.card-product__swatches -->
+    {%- endif -%}
+  </div><!-- /.card-product__meta mt-s -->
+
+  <script type="application/json" data-variants>
+    {{- product_ref.variants | json -}}
+  </script>
+
+  <script type="application/json" data-variants-images>
+    [
+    {%- for variant in product_ref.variants -%}
+      {%- unless forloop.first -%},{%- endunless -%}
+      {%- assign variant_image = variant.image | default: product_ref.featured_image -%}
+      {
+        "id": {{ variant.id | json }},
+        "image": {
+          "src": "{{ variant_image | image_url: width: 500 }}",
+          "srcset": "{%- render 'srcset', image: variant_image -%}"
+        }
+      }
+    {%- endfor -%}
+    ]
+  </script>
+</card-product><!-- /.card-product -->

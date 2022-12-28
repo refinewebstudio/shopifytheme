@@ -1,0 +1,150 @@
+{%- unless section.settings.external_video == blank and section.settings.video == nil -%}
+  {%-
+    liquid
+    echo 'section-hero.css' | asset_url | stylesheet_tag
+    echo 'component-deferred-media.css' | asset_url | stylesheet_tag
+    assign style_classes = 'color-' | append: section.settings.style | append: ' ' | append: section.settings.spacing_mobile | append: ' ' | append: section.settings.spacing_desktop
+  -%}
+
+  <script src="{{ 'deferred-media.js' | asset_url }}" defer></script>
+
+  <section class="hero hero--video {{ style_classes }} ">
+    <div class="container {% if section.settings.enable_fullwidth %} container--no-gutter container--fullwidth {% endif %}">
+      <div class="hero__inner relative">
+        {%-
+          liquid
+          render 'hero-block', height: '16-9', external_video: section.settings.external_video, video: section.settings.video, video_autoplay: section.settings.video_autoplay, disable_video_autoplay_on_mobile: section.settings.disable_autoplay_on_mobile, video_description: section.settings.description, image: section.settings.image, image_mobile: section.settings.image_mobile, show_deferred_media_on_mobile: true
+        -%}
+      </div><!-- /.hero__inner -->
+    </div><!-- /.container -->
+  </section><!-- /.hero -->
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "t:sections.video-banner.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "spacing_desktop",
+      "label": "t:sections.global.settings.spacing.label",
+      "options": [
+        {
+          "value": "mt-0--large mb-0--large",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs--large mb-xs--large",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s--large mb-s--large",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s--large mb-s--large"
+    },
+    {
+      "type": "select",
+      "id": "spacing_mobile",
+      "label": "t:sections.global.settings.spacing.label_mobile",
+      "options": [
+        {
+          "value": "mt-0 mb-0",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs mb-xs",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s mb-s",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s mb-s"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_fullwidth",
+      "label": "t:sections.video-banner.settings.enable_fullwidth.label",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.video-banner.settings.paragraph_background.content"
+    },
+    {
+      "type": "video_url",
+      "id": "external_video",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "label": "t:sections.video-banner.settings.external_video.label",
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "placeholder": "Video URL"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.video-banner.settings.video.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "t:sections.video-banner.settings.video_autoplay.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_autoplay_on_mobile",
+      "label": "t:sections.video-banner.settings.disable_video_autoplay_on_mobile.label",
+      "info": "t:sections.video-banner.settings.disable_video_autoplay_on_mobile.info",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:sections.video-banner.settings.description.label",
+      "info": "t:sections.video-banner.settings.description.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.video-banner.settings.cover_image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.video-banner.settings.cover_image_mobile.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.video-banner.name"
+    }
+  ]
+}
+{% endschema %}
+

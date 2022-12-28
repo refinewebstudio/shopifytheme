@@ -1,0 +1,19 @@
+{% comment %}
+  Accepts:
+    title: {String}
+    content: {String} - Richtext
+
+  Requires:
+    accordion-item.css
+    accordion-item.js
+{% endcomment %}
+
+<accordion-item class="accordion-item">
+  <details class="mt-0 pt-s pb-s" open>
+    <summary class="sh sh--3 motion-reduce">{{- title | escape -}}</summary>
+
+    <div class="rte p4 color-paragraphs motion-reduce">
+      {{- content -}}
+    </div><!-- /.rte -->
+  </details>
+</accordion-item>

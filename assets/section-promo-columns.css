@@ -1,0 +1,5 @@
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .section-promo-columns .section__heading {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+  }
+}

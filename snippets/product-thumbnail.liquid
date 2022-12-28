@@ -1,0 +1,16 @@
+<div class="product__thumbnail">
+  <div class="media media--portrait">
+    {%-
+      liquid
+      assign image_src = media.preview_image | image_url: width: 240
+      assign image_alt = media.alt | escape
+      render 'image', src: image_src, alt: image_alt, width: media.preview_image.width, height: media.preview_image.height
+    -%}
+  </div><!-- /.media media--portrait -->
+
+  {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+    {%- render 'icon-play-outlined' -%}
+  {%- elsif media.media_type == 'model' -%}
+    {%- render 'icon-3d' -%}
+  {%- endif -%}
+</div><!-- /.product__thumbnail -->

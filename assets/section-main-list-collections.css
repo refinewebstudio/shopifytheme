@@ -1,0 +1,14 @@
+.collections-grid {
+  color: var(--color-paragraphs);
+  background-color: var(--color-background);
+}
+
+.collections-grid__paging {
+  padding: calc(var(--spacing-step) * 6) var(--page-gap);
+}
+
+@media screen and (min-width: 990px) {
+  .collections-grid__paging {
+    padding: calc(var(--spacing-step) * 7) var(--page-gap-desktop);
+  }
+}

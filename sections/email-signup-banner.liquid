@@ -1,0 +1,111 @@
+{%- assign style_classes = section.settings.text_align | append: ' color-' | append: section.settings.style | append: ' color-background ' | append: section.settings.spacing_mobile | append: ' ' | append: section.settings.spacing_desktop | append: ' pt-xxl pb-xxl spacer-t-xs--large spacer-b-xs--large center' -%}
+
+<link rel="stylesheet" href="{{ 'component-text-content.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-form-elements.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>
+  {{- 'component-form-elements.css' | asset_url | stylesheet_tag -}}
+  {{- 'component-text-content.css' | asset_url | stylesheet_tag -}}
+  {{- 'section-newsletter.css' | asset_url | stylesheet_tag -}}
+</noscript>
+
+<section class="section-newsletter {{ style_classes }}">
+  <div class="container mb-xs mb-0--large">
+    {%-
+      liquid
+      if section.settings.heading != blank or section.settings.paragraph != blank
+        render 'text-content', heading_value: section.settings.heading, heading_class: 'h3', heading_size_tag: 'h3', paragraph_value: section.settings.paragraph, paragraph_class: 'p3'
+      endif
+    -%}
+
+    <div class="section__form mt-m mt-xxl--large">
+      {% render 'newsletter-form', namespace: section.id, button_type: 'button' %}
+    </div><!-- /.section__form -->
+  </div><!-- /.container container--narrow -->
+</section><!-- /.newsletter -->
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "spacing_desktop",
+      "label": "t:sections.global.settings.spacing.label",
+      "options": [
+        {
+          "value": "mt-0--large mb-0--large",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs--large mb-xs--large",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s--large mb-s--large",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s--large mb-s--large"
+    },
+    {
+      "type": "select",
+      "id": "spacing_mobile",
+      "label": "t:sections.global.settings.spacing.label_mobile",
+      "options": [
+        {
+          "value": "mt-0 mb-0",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs mb-xs",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s mb-s",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s mb-s"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:sections.global.settings.heading.label",
+      "default": "<p>Subscribe <em><strong>to newsletter</strong></em></p>"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "t:sections.global.settings.paragraph.label",
+      "default": "<p>Add descriptive text to invite your users to sign up for your newsletter.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.name"
+    }
+  ]
+}
+{% endschema %}

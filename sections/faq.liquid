@@ -1,0 +1,160 @@
+{%- if section.blocks.size > 0 or section.settings.subheading != blank or section.settings.heading != blank -%}
+  {%- assign navigation_blocks = section.blocks | where: 'type', 'separator' -%}
+
+  {{- 'section-faq.css' | asset_url | stylesheet_tag -}}
+  {{- 'accordion-item.css' | asset_url | stylesheet_tag -}}
+
+  <script src="{{- 'dropdown-disclosure.js' | asset_url -}}" defer></script>
+  <script src="{{- 'accordion-item.js' | asset_url -}}" defer></script>
+  <script src="{{- 'scroll-to.js' | asset_url -}}" defer></script>
+
+  <div class="faq color-{{ section.settings.style }} color-headings color-background">
+    <div class="container">
+      {%- if section.settings.subheading != blank or section.settings.heading != blank -%}
+        <div class="faq__head">
+          {%- if section.settings.subheading != blank -%}
+            <p class="sh sh--3 mt-0 mb-0 mb-xs--large">{{- section.settings.subheading | escape | newline_to_br -}}</p><!-- /.sh sh--3 -->
+          {%- endif -%}
+
+          {%- if section.settings.heading != blank -%}
+            <h1 class="h3 mt-0 mb-0">{{- section.settings.heading | replace: '</p><p>', '<br />' | replace: '<p>', '' | replace: '</p>', '' -}}</h1><!-- /.h3 -->
+          {%- endif -%}
+        </div><!-- /.faq__head -->
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="faq__body">
+          <div class="grid">
+            {%- if navigation_blocks.size > 0 -%}
+              <div class="grid__item grid__item--xs-3 small-hide">
+                <nav class="faq__nav pt-m">
+                  <ul class="list-unstyled">
+                    {%- for block in navigation_blocks -%}
+                      <li class="mb-xs">
+                        <scroll-to>
+                          <a href="#FAQ-{{- block.id -}}" class="link link--regular link--no-icon">
+                            {{- block.settings.title | escape -}}
+                          </a><!-- /.faq__link -->
+                        </scroll-to>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </nav>
+              </div><!-- /.grid__item grid__item--xs-3 -->
+            {%- endif -%}
+
+            <div class="grid__item {%- if navigation_blocks.size > 0 %} grid__item--xs-9{% else %} grid__item--xs-12{%- endif -%}">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'separator' -%}
+                    {%- if block.settings.title != blank -%}
+                      <p class="h5 mt-0 mb-s faq__title" id="FAQ-{{- block.id -}}">{{- block.settings.title | escape -}}</p><!-- /.h5 -->
+                    {%- endif -%}
+                  {%- when 'question' -%}
+                    {%- assign content = block.settings.answer_page.content | default: block.settings.answer -%}
+
+                    {%- if block.settings.question != blank and content != blank -%}
+                      {%- render 'accordion-item', title: block.settings.question, content: content -%}
+                    {%- endif -%}
+                {%- endcase -%}
+              {%- endfor -%}
+            </div><!-- /.grid__item -->
+          </div><!-- /.grid -->
+        </div><!-- /.faq__body -->
+      {%- endif -%}
+    </div><!-- /.container -->
+  </div><!-- /.faq -->
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.faq.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "t:sections.global.settings.subheading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:sections.faq.settings.heading.label",
+      "default": "<p>Frequently Asked <strong>Questions</strong></p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "separator",
+      "name": "t:sections.faq.blocks.faq-heading.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq.blocks.faq-heading.settings.title.label"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "t:sections.faq.blocks.question.name",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "t:sections.faq.blocks.question.settings.question.label",
+          "default": "Some frequently asked question?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "t:sections.faq.blocks.question.settings.answer.label",
+          "default": "<p>Answer to the question.</p>"
+        },
+        {
+          "type": "page",
+          "id": "answer_page",
+          "label": "t:sections.faq.blocks.question.settings.answer-page.label",
+          "info": "t:sections.faq.blocks.question.settings.answer-page.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq.name",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

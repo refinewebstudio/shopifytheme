@@ -1,0 +1,349 @@
+{%-
+  liquid
+  assign style_classes = 'color-' | append: section.settings.style | append: ' color-background ' | append: section.settings.spacing_mobile | append: ' ' | append: section.settings.spacing_desktop | append: ' pt-xl pb-xxl pt-xxl--large pb-l--large'
+  capture container_classes
+    echo 'pt-0 pb-0'
+    if section.settings.layout == 'slider-right'
+      echo ' spacer-t-s--large spacer-b-xs--large mb-m'
+    else
+      echo ' pt-m--large'
+    endif
+  endcapture
+  assign blog_title = section.settings.heading | default: section.settings.blog.title
+  assign blog_url = section.settings.button_url_1 | default: section.settings.blog.url
+  assign blocks_with_content_size = 0
+  assign slides_html = ''
+  capture slide_classes
+    echo 'swiper-slide grid__item articles-feed__slide'
+    if section.settings.layout == 'slider-right' and blog_title != blank
+      echo " grid__item--xs-12 grid__item--s-12"
+    else
+      echo " grid__item--xs-6 grid__item--s-4"
+    endif
+  endcapture
+
+  assign loop_limit = section.settings.articles_count
+-%}
+
+{%- capture slides_html -%}
+  {%- if section.blocks.size > 0 -%}
+    {%- for block in section.blocks -%}
+      {%- assign blocks_with_content_size = blocks_with_content_size | plus: 1 -%}
+      <div class="{{ slide_classes }}" data-id="{{ blocks_with_content_size | minus: 1 }}" {{ block.shopify_attributes }}>
+        {%- render 'card-article',
+          article_ref: block.settings.article_ref,
+          show_excerpt: false,
+          show_meta: false
+        -%}
+      </div><!-- /.swiper-slide -->
+    {%- endfor -%}
+  {%- elsif section.settings.blog != blank -%}
+    {%- for article_ref in section.settings.blog.articles limit: loop_limit -%}
+      {%- assign blocks_with_content_size = blocks_with_content_size | plus: 1 -%}
+      <div class="{{ slide_classes }}">
+        {%- render 'card-article',
+          article_ref: article_ref,
+          show_excerpt: false,
+          show_meta: false
+        -%}
+      </div><!-- /.swiper-slide -->
+    {%- endfor -%}
+  {%- else -%}
+    {%- assign blocks_with_content_size = loop_limit -%}
+    {%- for i in (1..loop_limit) -%}
+      <div class="{{ slide_classes }}">
+        {%- render 'card-article',
+          show_excerpt: false,
+          show_meta: false -%}
+      </div>
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- unless blocks_with_content_size == 0 -%}
+  <link rel="stylesheet" href="{{- 'component-text-content.css' | asset_url -}}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{- 'swiper-bundle.min.css' | asset_url -}}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{- 'component-slider.css' | asset_url -}}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{- 'component-card-article.css' | asset_url -}}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{- 'component-article-meta.css' | asset_url -}}" media="print" onload="this.media='all'">
+
+  <noscript>
+    {{- 'component-text-content.css' | asset_url | stylesheet_tag -}}
+    {{- 'swiper-bundle.min.css' | asset_url | stylesheet_tag -}}
+    {{- 'component-slider.css' | asset_url | stylesheet_tag -}}
+    {{- 'component-card-article.css' | asset_url | stylesheet_tag -}}
+    {{- 'component-article-meta.css' | asset_url | stylesheet_tag -}}
+  </noscript>
+
+  {%- unless request.design_mode -%}
+    <script src="{{- 'swiper-bundle.min.js' | asset_url -}}" defer="defer"></script>
+    <script src="{{- 'slider-component.js' | asset_url -}}" defer="defer"></script>
+    <script src="{{- 'articles-carousel.js' | asset_url -}}" defer="defer"></script>
+  {%- endunless -%}
+
+  <section class="section-featured-blog overflow-hidden {{ style_classes }}">
+    <div class="container {{ container_classes }}">
+      <div class="grid grid--row-gap-0">
+        {%-
+          liquid
+          assign show_multicolumn = false
+          if section.settings.layout == 'slider-right' and blog_title != blank
+            assign show_multicolumn = true
+          endif
+        -%}
+        <div class="grid__item grid__item--xs-12 pb-m {% if show_multicolumn %}grid__item--s-3 pt-0 pt-xl--large pb-0--large {% else %}grid__item--s-12{% endif %}">
+          <div class="container container--full-left">
+            {%-
+              liquid
+              assign buttons_value = 'button_size_1:' | append: section.settings.button_size_1 | append: '$' | append: 'button_style_1:' | append: section.settings.button_style_1 | append: '$' | append: 'button_text_1:' | append: section.settings.button_text_1 | append: '$' | append: 'button_url_1:' | append: blog_url
+              render 'text-content', subheading_class: 'sh--2', heading_value: blog_title, heading_size_tag: 'h2', heading_class: 'h2', subheading_value: section.settings.subheading, paragraph_value: section.settings.paragraph, paragraph_class: 'p2' buttons: buttons_value
+            -%}
+          </div><!-- /.container -->
+        </div><!-- /.grid__item -->
+
+        {%- unless section.settings.layout != 'slider-right' and show_multicolumn -%}
+          <span class="grid__item grid__item--s-1 small-hide medium-hide"></span>
+        {%- endunless -%}
+
+        <div class="grid__item grid__item--xs-12 {% if show_multicolumn %}grid__item--s-8{% else %}grid__item--s-12{% endif %}">
+          {%- if blocks_with_content_size < 4 and show_multicolumn == false
+              or blocks_with_content_size == 1 and show_multicolumn -%}
+            <div class="grid">
+              {{ slides_html }}
+            </div><!-- /.grid -->
+          {% else %}
+            {%-
+              liquid
+              assign autoplay_speed = settings.autoplay_speed | times: 1000
+              capture slider_attr
+                echo 'data-autoplay="' | append: section.settings.autoplay | append: '" '
+                echo 'data-autoplay-speed="' | append: autoplay_speed | append: '" '
+              endcapture
+              assign slider_style = 'infinite-both'
+              if show_multicolumn
+                assign slider_style = 'infinite-right'
+              endif
+              render 'slider-component', style: slider_style, content: slides_html, element: 'articles-carousel', class: 'articles-feed', attr: slider_attr, paging_styles: 'left,large'
+            -%}
+          {%- endif -%}
+        </div><!-- /.grid__item -->
+      </div><!-- /.grid -->
+    </div><!-- /.container -->
+  </section><!-- /.section-featured-blog -->
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "t:sections.featured-blog.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "spacing_desktop",
+      "label": "t:sections.global.settings.spacing.label",
+      "options": [
+        {
+          "value": "mt-0--large mb-0--large",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs--large mb-xs--large",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s--large mb-s--large",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s--large mb-s--large"
+    },
+    {
+      "type": "select",
+      "id": "spacing_mobile",
+      "label": "t:sections.global.settings.spacing.label_mobile",
+      "options": [
+        {
+          "value": "mt-0 mb-0",
+          "label": "t:sections.global.settings.spacing.options.option_1"
+        },
+        {
+          "value": "mt-xs mb-xs",
+          "label": "t:sections.global.settings.spacing.options.option_2"
+        },
+        {
+          "value": "mt-s mb-s",
+          "label": "t:sections.global.settings.spacing.options.option_3"
+        }
+      ],
+      "default": "mt-s mb-s"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.featured-blog.settings.layout.label",
+      "options": [
+        {
+          "value": "fullwidth",
+          "label": "t:sections.featured-blog.settings.layout.options.option_1.label"
+        },
+        {
+          "value": "slider-right",
+          "label": "t:sections.featured-blog.settings.layout.options.option_2.label"
+        }
+      ],
+      "default": "fullwidth"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-blog.settings.header_content.content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.global.settings.subheading.label",
+      "default": "Add a tagline"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "t:sections.global.settings.heading.label",
+      "default": "<p>Latest <em><strong>news</strong></em></p>"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "t:sections.global.settings.paragraph.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-blog.settings.header_button.content"
+    },
+    {
+      "type": "select",
+      "id": "button_style_1",
+      "label": "t:sections.global.settings.buttons.button.settings.style.label",
+      "options": [
+        {
+          "value": "solid",
+          "label": "t:sections.global.settings.buttons.button.settings.style.options.option_1"
+        },
+        {
+          "value": "outline",
+          "label": "t:sections.global.settings.buttons.button.settings.style.options.option_2"
+        },
+        {
+          "value": "link",
+          "label": "t:sections.global.settings.buttons.button.settings.style.options.option_3"
+        }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "select",
+      "id": "button_size_1",
+      "label": "t:sections.global.settings.buttons.button.settings.size.label",
+      "options": [
+        {
+          "value": "s",
+          "label": "t:sections.global.settings.buttons.button.settings.size.options.option_1"
+        },
+        {
+          "value": "m",
+          "label": "t:sections.global.settings.buttons.button.settings.size.options.option_2"
+        },
+        {
+          "value": "l",
+          "label": "t:sections.global.settings.buttons.button.settings.size.options.option_3"
+        }
+      ],
+      "default": "s"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "t:sections.global.settings.buttons.button.settings.button_text.label",
+      "default": "Explore"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "t:sections.global.settings.buttons.button.settings.button_url.label",
+      "info": "t:sections.featured-blog.settings.button_url_1.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-blog.settings.header_slider.content"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured-blog.settings.blog.label",
+      "info": "t:sections.featured-blog.settings.blog.info"
+    },
+    {
+      "type": "range",
+      "id": "articles_count",
+      "label": "t:sections.featured-blog.settings.articles_count.label",
+      "info": "t:sections.featured-blog.settings.articles_count.info",
+      "min": 5,
+      "max": 12,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.featured-blog.settings.autoplay.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "t:sections.featured-blog.settings.autoplay_speed.label",
+      "unit": "s",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.featured-blog.blocks.article.name",
+      "type": "article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article_ref",
+          "label": "t:sections.featured-blog.blocks.article.settings.article.label",
+          "info": "t:sections.featured-blog.blocks.article.settings.article.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-blog.name"
+    }
+  ]
+}
+{% endschema %}

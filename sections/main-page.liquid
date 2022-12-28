@@ -1,0 +1,21 @@
+<section class="container container--narrow rte">
+  {%- unless section.settings.hide_heading -%}
+    <h1 class="h1 center">{{- page.title | escape -}}</h1><!-- /.h1 center -->
+  {%- endunless -%}
+
+  {{- page.content -}}
+</section><!-- /.container container--narrow rte -->
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_heading",
+      "label": "t:sections.main-page.settings.hide_heading.label",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

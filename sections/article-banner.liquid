@@ -1,0 +1,125 @@
+{{- 'section-article-banner.css' | asset_url | stylesheet_tag -}}
+
+<div class="article-banner color-{{- section.settings.style -}}">
+  {%- render 'breadcrumbs' -%}
+
+  <div class="container article-banner__container pt-xxl--large pb-xl--large {%- if section.settings.width != '' %} container--{{- section.settings.width -}}{%- endif -%}">
+    <h1 class="article-banner__title h2 mt-l mb-s">{{- article.title -}}</h1><!-- /.h2 -->
+
+    {%- if article.image != blank -%}
+      <div class="media media--3-4">
+        <img src="{{- article.image.src | image_url -}}" alt="{{- article.image.alt -}}" width="{{- article.image.width -}}" height="{{- article.image.height -}}" loading="lazy">
+      </div><!-- /.media media--3-4 -->
+    {%- endif -%}
+
+    {%- if section.settings.show_meta or section.settings.show_tags -%}
+      <div class="article-banner__content">
+        {%- if section.settings.show_meta -%}
+          <div class="article-banner__meta mt-s flex flex--center">
+            {%- assign author_name = article.author | escape -%}
+
+            <span class="article-banner__avatar">
+              {%- if article.user.image != blank -%}
+                <img src="{{ article.user.image | image_url: width: 100 }}" alt="{{ author_name }}" width="auto" height="auto" loading="lazy">
+              {%- else -%}
+                <span class="flex flex--center flex--justify-center">
+                  {{- article.user.first_name | split: '' | first -}}
+                  {{- article.user.last_name | split: '' | first -}}
+                </span>
+              {%- endif -%}
+            </span>
+
+            <span class="p4">{{- author_name -}}</span>
+
+            {%- for tag in article.tags -%}
+              {%- unless tag contains 'time:' -%}
+                {%- continue -%}
+              {%- endunless -%}
+
+              {%- assign minutes = tag | split: 'time:' | last | strip -%}
+
+              <span class="article-banner__time p4">{{- 'article.time' | t: minutes: minutes -}}</span><!-- /.article__time -->
+
+              {%- break -%}
+            {%- endfor -%}
+          </div><!-- /.article-banner__meta -->
+        {%- endif -%}
+
+        {%- if section.settings.show_tags -%}
+          <ul class="article-banner__tags mt-s mb-s list-unstyled flex">
+            {%- for tag in article.tags -%}
+              {%- if tag contains 'time:' -%}
+                {%- continue -%}
+              {%- endif -%}
+
+              <li class="article-banner__tag">
+                {%- assign tag_handle = tag | handle -%}
+
+                <a href="{{- blog.url | append: '/tagged/' | append: tag_handle -}}" class="full-unstyled-link p5">
+                  {%- unless forloop.index0 == 0 -%}, {% endunless -%}{{- tag -}}
+                </a>
+              </li><!-- ./card-article__tag -->
+            {%- endfor -%}
+          </ul><!-- /.card-article__tags list-unstyled -->
+        {%- endif -%}
+      </div><!-- /.article-banner__content -->
+    {%- endif -%}
+  </div><!-- /.container article-banner__container -->
+</div><!-- /.article-banner -->
+
+{% schema %}
+{
+  "name": "t:sections.article-banner.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.global.settings.style.label",
+      "options": [
+        {
+          "value": "style-1",
+          "label": "t:sections.global.settings.style.options.option_1"
+        },
+        {
+          "value": "style-2",
+          "label": "t:sections.global.settings.style.options.option_2"
+        },
+        {
+          "value": "style-3",
+          "label": "t:sections.global.settings.style.options.option_3"
+        }
+      ],
+      "default": "style-1"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.global.settings.width.label",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "t:sections.global.settings.width.options.option_1"
+        },
+        {
+          "value": "",
+          "label": "t:sections.global.settings.width.options.option_2"
+        }
+      ],
+      "default": "narrow"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_meta",
+      "label": "t:sections.article-banner.settings.show_meta.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "t:sections.article-banner.settings.show_tags.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
