@@ -49,19 +49,13 @@
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-0": {
           "type": "subheading",
           "settings": {
-            "subheading": "Tell your story"
+            "subheading": "How does it work?"
           }
         },
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-1": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>"
-          }
-        },
-        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-2": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading": "<p>Luxurious lashes delivered to your door<\/p>"
           }
         },
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-3": {
@@ -69,20 +63,26 @@
           "settings": {
             "button_style_1": "link",
             "button_size_1": "m",
-            "button_text_1": "Button text",
+            "button_text_1": "FAQs",
             "button_url_1": "shopify:\/\/collections",
             "button_style_2": "link",
             "button_size_2": "m",
             "button_text_2": "",
             "button_url_2": ""
           }
+        },
+        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-2": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>We offer a convenient subscription service where you can choose to receive lashes of your choice in style delivered to your door each month. It's the perfect way to always have a fresh supply of gorgeous, long-lasting lashes.<\/p><p><\/p><p>We specialize in high-quality false eyelashes. Our lashes are handmade with the finest materials, ensuring that they are comfortable to wear and look natural on your eyes.<\/p>"
+          }
         }
       },
       "block_order": [
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-0",
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-1",
-        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-2",
-        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-3"
+        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-3",
+        "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-2"
       ],
       "settings": {
         "style": "style-2",
@@ -98,9 +98,9 @@
         "spacing_desktop": "mt-0--large mb-0--large",
         "spacing_mobile": "mt-0 mb-0",
         "layout": "slider-right",
-        "subheading": "Add a tagline",
-        "heading": "<p>Add Collection <em><strong>Headline<\/strong><\/em> here<\/p>",
-        "paragraph": "",
+        "subheading": "Our styles",
+        "heading": "<p>Choose your perfect pair &lt;3<\/p>",
+        "paragraph": "<p>Mix & match!<\/p>",
         "button_style_1": "solid",
         "button_size_1": "m",
         "button_text_1": "Shop now",
@@ -120,9 +120,9 @@
         "style": "style-3",
         "spacing_desktop": "mt-0--large mb-0--large",
         "spacing_mobile": "mt-0 mb-0",
-        "marquee_text": "<p>Add campaign or promotional text here<\/p>",
+        "marquee_text": "<p>Sign up for a Lyngsy subscription today and experience the ultimate in lash luxury <\/p>",
         "marquee_position": "top",
-        "marquee_pause_on_hover": false,
+        "marquee_pause_on_hover": true,
         "marquee_speed": 1,
         "remove_image_gap": false,
         "image_aspect_ratio": "1-1"
