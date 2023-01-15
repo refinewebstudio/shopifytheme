@@ -1,5 +1,7 @@
 {
   "current": {
+    "style_1_background_color": "#ffffff",
+    "style_1_foreground_color": "#000000",
     "style_2_headings_accent_color": "#ffffff",
     "type_header_font": "harmonia_sans_n7",
     "type_body_font": "harmonia_sans_n4",
@@ -7,7 +9,10 @@
     "phone": "+123456",
     "email": "email@example.com",
     "show_currency_codes": false,
-    "enable_cart_shipping_bar": false,
+    "cart_type": "drawer",
+    "cart_page_style": "style-3",
+    "cart_drawer_style": "style-2",
+    "enable_cart_shipping_bar": true,
     "cart_shipping_bar_threshold": 100,
     "cart_shipping_bar_progress_text": "You are [amount] away from Free Shipping",
     "cart_shipping_bar_success_text": "Congratulations! You're eligible for free shipping!",
@@ -20,7 +25,7 @@
     ],
     "cart_upsell_use_recommendations_api": true,
     "additional_checkout_buttons": true,
-    "enable_terms": false,
+    "enable_terms": true,
     "show_payment_icons": true,
     "enable_message": true,
     "wrap_product": "",
