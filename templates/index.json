@@ -509,26 +509,6 @@
         "button_url_1": ""
       }
     },
-    "2ff801b9-2c09-4c72-bccc-dd330e1cdf87": {
-      "type": "featured-blog",
-      "settings": {
-        "style": "style-3",
-        "spacing_desktop": "mt-0--large mb-0--large",
-        "spacing_mobile": "mt-0 mb-0",
-        "layout": "slider-right",
-        "subheading": "Add a tagline",
-        "heading": "<p>Latest <em><strong>news<\/strong><\/em><\/p>",
-        "paragraph": "",
-        "button_style_1": "link",
-        "button_size_1": "s",
-        "button_text_1": "Explore",
-        "button_url_1": "\/",
-        "blog": "",
-        "articles_count": 12,
-        "autoplay": false,
-        "autoplay_speed": 5
-      }
-    },
     "5035fe8c-2acc-40f3-ada0-b62cca12b274": {
       "type": "testimonials",
       "blocks": {
@@ -582,7 +562,7 @@
         "spacing_desktop": "mt-0--large mb-0--large",
         "spacing_mobile": "mt-0 mb-0",
         "heading": "<p>Subscribe <em>to our newsletter<\/em><\/p>",
-        "paragraph": "<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>"
+        "paragraph": ""
       }
     }
   },
@@ -600,7 +580,6 @@
     "d334f4c8-4f23-4067-999f-22c4784e6396",
     "93e60874-84d5-415c-9bba-85aa4dd63719",
     "6e71800e-22a3-457f-b902-ffa51664b1af",
-    "2ff801b9-2c09-4c72-bccc-dd330e1cdf87",
     "5035fe8c-2acc-40f3-ada0-b62cca12b274",
     "82e419c8-3746-4f17-9dcf-d3fae1f17e8c"
   ]
