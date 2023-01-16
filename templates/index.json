@@ -9,8 +9,6 @@
             "external_video": "",
             "disable_autoplay_on_mobile": true,
             "description": "",
-            "image": "shopify:\/\/shop_images\/1.png",
-            "image_mobile": "shopify:\/\/shop_images\/Gold_Shimmer_Glitter_Aesthetic_Sale_Website_Banner_Instagram_Story.png",
             "image_crop": "center",
             "background_overlay": "#fffdfd",
             "background_overlay_opacity": 19,
@@ -45,6 +43,7 @@
     },
     "03d54d72-e46a-473d-bb02-c2da979392cd": {
       "type": "richtext",
+      "disabled": true,
       "blocks": {
         "template--15907127984325__03d54d72-e46a-473d-bb02-c2da979392cd-16678305518bb1395f-0": {
           "type": "subheading",
@@ -93,6 +92,7 @@
     },
     "4e185abc-b3c0-47ef-8eb1-e6417ee0b89a": {
       "type": "featured-products",
+      "disabled": true,
       "settings": {
         "style": "style-1",
         "spacing_desktop": "mt-0--large mb-0--large",
@@ -130,6 +130,7 @@
     },
     "82a922ed-87db-466a-b638-32d73e3cfebc": {
       "type": "featured-content-columns",
+      "disabled": true,
       "blocks": {
         "template--15907127984325__82a922ed-87db-466a-b638-32d73e3cfebc-16678305328fa4bc7a-0": {
           "type": "big-card",
@@ -176,6 +177,7 @@
     },
     "f68c224f-3d8b-46a9-8a25-915995370bee": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "template--15907127984325__f68c224f-3d8b-46a9-8a25-915995370bee-1667830550325d52b8-0": {
           "type": "subheading",
@@ -227,6 +229,7 @@
     },
     "07701733-7c04-43b3-825b-dd5a1006fc6c": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "template--15907127984325__07701733-7c04-43b3-825b-dd5a1006fc6c-1667830550325d52b8-0": {
           "type": "subheading",
@@ -328,6 +331,7 @@
     },
     "c7cb7b4b-7c31-4101-8698-07ac564c27d2": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "style": "style-1",
         "spacing_desktop": "mt-s--large mb-s--large",
@@ -350,6 +354,7 @@
     },
     "0e1a2307-29a4-479c-92cc-d6d30fbace10": {
       "type": "banner",
+      "disabled": true,
       "blocks": {
         "template--15907127984325__0e1a2307-29a4-479c-92cc-d6d30fbace10-166783053284ee5819-0": {
           "type": "subheading",
@@ -397,6 +402,7 @@
     },
     "d334f4c8-4f23-4067-999f-22c4784e6396": {
       "type": "promo-bar",
+      "disabled": true,
       "settings": {
         "style": "style-2",
         "spacing_desktop": "mt-0--large mb-0--large",

@@ -2,6 +2,7 @@
   "current": {
     "style_1_background_color": "#ffffff",
     "style_1_foreground_color": "#000000",
+    "style_1_buttons_solid_background_color": "#ff99c8",
     "style_2_headings_accent_color": "#ffffff",
     "type_header_font": "harmonia_sans_n7",
     "type_body_font": "harmonia_sans_n4",
