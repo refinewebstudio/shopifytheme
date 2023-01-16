@@ -285,7 +285,7 @@
         "template--15907127984325__453e83ba-c6dc-41a8-a5a0-e923b1194687-1667830533495cec03-0": {
           "type": "card",
           "settings": {
-            "collection": "",
+            "collection": "home",
             "heading": "Collection",
             "link_text": "",
             "link_url": "shopify:\/\/collections"
