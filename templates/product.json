@@ -1,1 +1,343 @@
-{"sections":{"main":{"type":"main-product","blocks":{"5ad897b0-57f4-4599-849d-2a41a78c9399":{"type":"badges","settings":{}},"2dd2f51a-f755-4a34-ab97-3d560f52d666":{"type":"title","settings":{}},"a574468c-b971-46d7-bf83-d54ae6679d82":{"type":"type","settings":{}},"6f1bce4f-f119-49ae-a5b5-28fce3641a2a":{"type":"price","settings":{}},"b07a1b21-c53c-4514-9563-0da2a57df8ad":{"type":"variant-selector","settings":{"title":"Variant selector","size_guide_page":""}},"1cfcca14-dc02-433c-86a5-68ceb8392c70":{"type":"quantity-input","settings":{}},"ac47188a-8ab8-4b89-beaf-a96495b14053":{"type":"stock-notification","settings":{"threshold":15}},"c47aaa5e-5dc0-4aea-8f63-682ae19f5192":{"type":"pickup-availability","settings":{}},"713b003a-1374-4d1f-9f98-3f96ed4881ce":{"type":"buy-buttons","settings":{"show_dynamic_checkout":true}},"ceed2691-0e85-47e8-8442-2375657b6222":{"type":"product-content","settings":{}},"41565d3a-f614-4064-b7d2-08451e08cc1c":{"type":"collapsible-tabs","settings":{"tab_title_1":"Tab title","tab_content_1":"<p>Descriptive tab content<\/p>","tab_page_1":"","tab_title_2":"Tab title","tab_content_2":"<p>Descriptive tab content<\/p>","tab_page_2":"","tab_title_3":"Tab title","tab_content_3":"<p>Descriptive tab content<\/p>","tab_page_3":""}},"d2d15c7c-25a6-4d9c-86f1-a57afbc62204":{"type":"upsell-products","settings":{"title":"Complete the Look"}},"4efdfff0-f62b-4d27-bbb5-fb5817233073":{"type":"sticky-bar","settings":{"show_quantity":true,"hide_options_mobile":false}}},"block_order":["5ad897b0-57f4-4599-849d-2a41a78c9399","2dd2f51a-f755-4a34-ab97-3d560f52d666","a574468c-b971-46d7-bf83-d54ae6679d82","6f1bce4f-f119-49ae-a5b5-28fce3641a2a","b07a1b21-c53c-4514-9563-0da2a57df8ad","1cfcca14-dc02-433c-86a5-68ceb8392c70","ac47188a-8ab8-4b89-beaf-a96495b14053","c47aaa5e-5dc0-4aea-8f63-682ae19f5192","713b003a-1374-4d1f-9f98-3f96ed4881ce","ceed2691-0e85-47e8-8442-2375657b6222","41565d3a-f614-4064-b7d2-08451e08cc1c","d2d15c7c-25a6-4d9c-86f1-a57afbc62204","4efdfff0-f62b-4d27-bbb5-fb5817233073"],"settings":{"style":"style-1","spacing_desktop":"mt-s--large mb-s--large","spacing_mobile":"mt-s mb-s","adaptive_slider_height":true,"enable_breadcrumbs":true,"gallery_type":"grid"}},"recommendations":{"type":"product-recommendations","settings":{"style":"style-1","spacing_desktop":"mt-0--large mb-0--large","spacing_mobile":"mt-0 mb-0","layout":"slider-right","subheading":"","heading":"<p>You Might Also Like<\/p>","paragraph":"<p>Here are some more products that you might like based on our clients preferences.<\/p>","autoplay":false,"autoplay_speed":5}}},"order":["main","recommendations"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "5ad897b0-57f4-4599-849d-2a41a78c9399": {
+          "type": "badges",
+          "settings": {
+          }
+        },
+        "2dd2f51a-f755-4a34-ab97-3d560f52d666": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "a574468c-b971-46d7-bf83-d54ae6679d82": {
+          "type": "type",
+          "settings": {
+          }
+        },
+        "6f1bce4f-f119-49ae-a5b5-28fce3641a2a": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "b07a1b21-c53c-4514-9563-0da2a57df8ad": {
+          "type": "variant-selector",
+          "settings": {
+            "title": "Variant selector",
+            "size_guide_page": ""
+          }
+        },
+        "1cfcca14-dc02-433c-86a5-68ceb8392c70": {
+          "type": "quantity-input",
+          "settings": {
+          }
+        },
+        "ac47188a-8ab8-4b89-beaf-a96495b14053": {
+          "type": "stock-notification",
+          "settings": {
+            "threshold": 15
+          }
+        },
+        "c47aaa5e-5dc0-4aea-8f63-682ae19f5192": {
+          "type": "pickup-availability",
+          "settings": {
+          }
+        },
+        "713b003a-1374-4d1f-9f98-3f96ed4881ce": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "ceed2691-0e85-47e8-8442-2375657b6222": {
+          "type": "product-content",
+          "settings": {
+          }
+        },
+        "41565d3a-f614-4064-b7d2-08451e08cc1c": {
+          "type": "collapsible-tabs",
+          "settings": {
+            "tab_title_1": "Tab title",
+            "tab_content_1": "<p>Descriptive tab content<\/p>",
+            "tab_page_1": "",
+            "tab_title_2": "Tab title",
+            "tab_content_2": "<p>Descriptive tab content<\/p>",
+            "tab_page_2": "",
+            "tab_title_3": "Tab title",
+            "tab_content_3": "<p>Descriptive tab content<\/p>",
+            "tab_page_3": ""
+          }
+        },
+        "d2d15c7c-25a6-4d9c-86f1-a57afbc62204": {
+          "type": "upsell-products",
+          "settings": {
+            "title": "Complete the Look"
+          }
+        },
+        "4efdfff0-f62b-4d27-bbb5-fb5817233073": {
+          "type": "sticky-bar",
+          "settings": {
+            "show_quantity": true,
+            "hide_options_mobile": false
+          }
+        },
+        "f70a98a1-b9d3-464e-adf5-d6f09d7e817c": {
+          "type": "purchase-options",
+          "settings": {
+            "title": "Purchase Options"
+          }
+        },
+        "cb7ffe72-8180-48b6-b297-9f63527404e9": {
+          "type": "text",
+          "settings": {
+            "title": "Additional text"
+          }
+        },
+        "326d6c47-b378-4ff5-b875-8934d9e73b89": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ad897b0-57f4-4599-849d-2a41a78c9399",
+        "2dd2f51a-f755-4a34-ab97-3d560f52d666",
+        "a574468c-b971-46d7-bf83-d54ae6679d82",
+        "6f1bce4f-f119-49ae-a5b5-28fce3641a2a",
+        "b07a1b21-c53c-4514-9563-0da2a57df8ad",
+        "1cfcca14-dc02-433c-86a5-68ceb8392c70",
+        "ac47188a-8ab8-4b89-beaf-a96495b14053",
+        "c47aaa5e-5dc0-4aea-8f63-682ae19f5192",
+        "713b003a-1374-4d1f-9f98-3f96ed4881ce",
+        "ceed2691-0e85-47e8-8442-2375657b6222",
+        "41565d3a-f614-4064-b7d2-08451e08cc1c",
+        "d2d15c7c-25a6-4d9c-86f1-a57afbc62204",
+        "4efdfff0-f62b-4d27-bbb5-fb5817233073",
+        "f70a98a1-b9d3-464e-adf5-d6f09d7e817c",
+        "cb7ffe72-8180-48b6-b297-9f63527404e9",
+        "326d6c47-b378-4ff5-b875-8934d9e73b89"
+      ],
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s",
+        "adaptive_slider_height": true,
+        "enable_breadcrumbs": true,
+        "gallery_type": "grid"
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-0--large mb-0--large",
+        "spacing_mobile": "mt-0 mb-0",
+        "layout": "slider-right",
+        "subheading": "",
+        "heading": "<p>You Might Also Like<\/p>",
+        "paragraph": "<p>Here are some more products that you might like based on our clients preferences.<\/p>",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "4af2303e-fe4a-4e27-9acc-3bbdcfcf9362": {
+      "type": "featured-content-columns",
+      "disabled": true,
+      "blocks": {
+        "template--17400478466326__4af2303e-fe4a-4e27-9acc-3bbdcfcf9362-16739089106103da81-0": {
+          "type": "big-card",
+          "settings": {
+            "subheading": "",
+            "heading": "<p>Heading <em>with accent <strong>element<\/strong><\/em><\/p>",
+            "paragraph": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "button_style_1": "link",
+            "button_size_1": "s",
+            "button_text_1": "Learn More",
+            "button_url_1": "shopify:\/\/collections\/all",
+            "button_style_2": "solid",
+            "button_size_2": "s",
+            "button_text_2": "",
+            "button_url_2": ""
+          }
+        },
+        "template--17400478466326__4af2303e-fe4a-4e27-9acc-3bbdcfcf9362-16739089106103da81-1": {
+          "type": "small-card",
+          "settings": {
+            "subheading": "",
+            "heading": "<p>Heading <em>with accent <strong>element<\/strong><\/em><\/p>",
+            "paragraph": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "button_style_1": "link",
+            "button_size_1": "s",
+            "button_text_1": "Learn More",
+            "button_url_1": "shopify:\/\/collections\/all",
+            "button_style_2": "solid",
+            "button_size_2": "s",
+            "button_text_2": "",
+            "button_url_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17400478466326__4af2303e-fe4a-4e27-9acc-3bbdcfcf9362-16739089106103da81-0",
+        "template--17400478466326__4af2303e-fe4a-4e27-9acc-3bbdcfcf9362-16739089106103da81-1"
+      ],
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s"
+      }
+    },
+    "2e2d8759-c22f-4744-ac76-34c095bf6e76": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s",
+        "layout_desktop": "slider-right",
+        "layout_mobile": "image-top",
+        "image_crop": "center",
+        "subheading": "",
+        "heading": "<p>Featured <em>collection<\/em><\/p>",
+        "paragraph": "<p>Pair text with an image to focus on your collection. Add details on availability, style, or even provide a review.<\/p>",
+        "button_style": "link",
+        "button_size": "m",
+        "button_text": "",
+        "button_url_1": "",
+        "collection": "",
+        "products_count": 12,
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "70cd133e-1b47-4e7f-a7cb-24c1d10519a9": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s",
+        "layout_desktop": "slider-right",
+        "layout_mobile": "image-top",
+        "image_crop": "center",
+        "subheading": "",
+        "heading": "<p>Featured <em>collection<\/em><\/p>",
+        "paragraph": "<p>Pair text with an image to focus on your collection. Add details on availability, style, or even provide a review.<\/p>",
+        "button_style": "link",
+        "button_size": "m",
+        "button_text": "",
+        "button_url_1": "",
+        "collection": "",
+        "products_count": 12,
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "e3d54630-6d28-4e9a-911c-d7aaf9310e35": {
+      "type": "featured-content-columns",
+      "disabled": true,
+      "blocks": {
+        "template--17400478466326__e3d54630-6d28-4e9a-911c-d7aaf9310e35-16739089106103da81-0": {
+          "type": "big-card",
+          "settings": {
+            "subheading": "",
+            "heading": "<p>Heading <em>with accent <strong>element<\/strong><\/em><\/p>",
+            "paragraph": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "button_style_1": "link",
+            "button_size_1": "s",
+            "button_text_1": "Learn More",
+            "button_url_1": "shopify:\/\/collections\/all",
+            "button_style_2": "solid",
+            "button_size_2": "s",
+            "button_text_2": "",
+            "button_url_2": ""
+          }
+        },
+        "template--17400478466326__e3d54630-6d28-4e9a-911c-d7aaf9310e35-16739089106103da81-1": {
+          "type": "small-card",
+          "settings": {
+            "subheading": "",
+            "heading": "<p>Heading <em>with accent <strong>element<\/strong><\/em><\/p>",
+            "paragraph": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "button_style_1": "link",
+            "button_size_1": "s",
+            "button_text_1": "Learn More",
+            "button_url_1": "shopify:\/\/collections\/all",
+            "button_style_2": "solid",
+            "button_size_2": "s",
+            "button_text_2": "",
+            "button_url_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17400478466326__e3d54630-6d28-4e9a-911c-d7aaf9310e35-16739089106103da81-0",
+        "template--17400478466326__e3d54630-6d28-4e9a-911c-d7aaf9310e35-16739089106103da81-1"
+      ],
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s"
+      }
+    },
+    "1fc1bbb4-9ddb-4537-94c6-3eed396a80d5": {
+      "type": "featured-products",
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s",
+        "layout": "fullwidth",
+        "subheading": "Add a tagline",
+        "heading": "<p>Add Collection <em><strong>Headline<\/strong><\/em> here<\/p>",
+        "paragraph": "",
+        "button_style_1": "link",
+        "button_size_1": "s",
+        "button_text_1": "Shop now",
+        "button_url_1": "shopify:\/\/collections",
+        "collection": "",
+        "product_list": [
+
+        ],
+        "products_count": 8,
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "8596e91d-1ab4-4877-b645-04fc02458f5b": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "style": "style-1",
+        "spacing_desktop": "mt-s--large mb-s--large",
+        "spacing_mobile": "mt-s mb-s",
+        "layout": "fullwidth",
+        "subheading": "Add a tagline",
+        "heading": "<p>Latest <em><strong>news<\/strong><\/em><\/p>",
+        "paragraph": "",
+        "button_style_1": "link",
+        "button_size_1": "s",
+        "button_text_1": "Explore",
+        "button_url_1": "",
+        "blog": "",
+        "articles_count": 12,
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommendations",
+    "4af2303e-fe4a-4e27-9acc-3bbdcfcf9362",
+    "2e2d8759-c22f-4744-ac76-34c095bf6e76",
+    "70cd133e-1b47-4e7f-a7cb-24c1d10519a9",
+    "e3d54630-6d28-4e9a-911c-d7aaf9310e35",
+    "1fc1bbb4-9ddb-4537-94c6-3eed396a80d5",
+    "8596e91d-1ab4-4877-b645-04fc02458f5b"
+  ]
+}

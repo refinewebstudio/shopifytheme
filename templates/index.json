@@ -318,12 +318,12 @@
       "settings": {
         "style": "style-1",
         "spacing_desktop": "mt-s--large mb-s--large",
-        "spacing_mobile": "mt-s mb-s",
+        "spacing_mobile": "mt-xs mb-xs",
         "text_align": "left",
         "subheading": "",
-        "heading": "<p>Collections <em><strong>Headline<\/strong><\/em><\/p>",
-        "paragraph": "<p>Add a short description for your collections<\/p>",
-        "media_type": "portrait",
+        "heading": "<p><em><strong>Lash Sets<\/strong><\/em><\/p>",
+        "paragraph": "<p>Choose your lashes wisely.<\/p>",
+        "media_type": "1-1",
         "card_content_layout": "outside",
         "show_cards_background": false,
         "items_per_slide": 3

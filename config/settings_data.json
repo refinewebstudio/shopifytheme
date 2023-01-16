@@ -71,6 +71,26 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "cd7ad229-380b-4bda-b8b3-6ed0ecefa42d": {
+            "type": "megamenu",
+            "settings": {
+              "title": "",
+              "item_1_subheading": "",
+              "item_1_heading": "",
+              "item_1_link": "",
+              "item_2_subheading": "",
+              "item_2_heading": "",
+              "item_2_link": "",
+              "item_3_subheading": "",
+              "item_3_heading": "",
+              "item_3_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "cd7ad229-380b-4bda-b8b3-6ed0ecefa42d"
+        ],
         "settings": {
           "style": "style-2",
           "logo_position": "center",
