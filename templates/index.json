@@ -117,15 +117,15 @@
     "6d9fa46b-784c-4fa8-a2cf-2b5f7d428352": {
       "type": "marquee",
       "settings": {
-        "style": "style-3",
-        "spacing_desktop": "mt-0--large mb-0--large",
-        "spacing_mobile": "mt-0 mb-0",
+        "style": "style-2",
+        "spacing_desktop": "mt-xs--large mb-xs--large",
+        "spacing_mobile": "mt-s mb-s",
         "marquee_text": "<p>Sign up for a Lyngsy subscription today and experience the ultimate in lash luxury <\/p>",
         "marquee_position": "top",
         "marquee_pause_on_hover": true,
         "marquee_speed": 1,
         "remove_image_gap": false,
-        "image_aspect_ratio": "1-1"
+        "image_aspect_ratio": "portrait"
       }
     },
     "82a922ed-87db-466a-b638-32d73e3cfebc": {
