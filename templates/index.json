@@ -498,7 +498,7 @@
         "style": "style-1",
         "spacing_desktop": "mt-0--large mb-0--large",
         "spacing_mobile": "mt-0 mb-0",
-        "hotspot_color": "#fff",
+        "hotspot_color": "#ffffff",
         "swap_layout": false,
         "subheading": "",
         "heading": "<p>Look Heading<\/p>",
@@ -575,75 +575,13 @@
         "autoplay_speed": 5
       }
     },
-    "76fd847c-7a8a-495e-9e1e-57cf30735a61": {
-      "type": "social-feed",
-      "blocks": {
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-0": {
-          "type": "image",
-          "settings": {
-            "link_url": "",
-            "hide_on_tablet": false,
-            "hide_on_mobile": false
-          }
-        },
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-1": {
-          "type": "image",
-          "settings": {
-            "link_url": "",
-            "hide_on_tablet": false,
-            "hide_on_mobile": false
-          }
-        },
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-2": {
-          "type": "image",
-          "settings": {
-            "link_url": "",
-            "hide_on_tablet": false,
-            "hide_on_mobile": false
-          }
-        },
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-3": {
-          "type": "image",
-          "settings": {
-            "link_url": "",
-            "hide_on_tablet": false,
-            "hide_on_mobile": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-0",
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-1",
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-2",
-        "template--15907127984325__76fd847c-7a8a-495e-9e1e-57cf30735a61-166783078807b334d9-3"
-      ],
-      "settings": {
-        "style": "style-1",
-        "spacing_desktop": "mt-0--large mb-0--large",
-        "spacing_mobile": "mt-0 mb-0",
-        "content_position": "top",
-        "subheading": "",
-        "heading": "<p>Heading for Social images<\/p>",
-        "paragraph": "",
-        "button_style_1": "solid",
-        "button_size_1": "m",
-        "button_text_1": "",
-        "button_url_1": "",
-        "button_style_2": "solid",
-        "button_size_2": "m",
-        "button_text_2": "",
-        "button_url_2": "",
-        "remove_image_gap": false,
-        "image_aspect_ratio": "1-1"
-      }
-    },
     "82e419c8-3746-4f17-9dcf-d3fae1f17e8c": {
       "type": "email-signup-banner",
       "settings": {
         "style": "style-2",
         "spacing_desktop": "mt-0--large mb-0--large",
         "spacing_mobile": "mt-0 mb-0",
-        "heading": "<p>Subscribe <em>to newsletter<\/em><\/p>",
+        "heading": "<p>Subscribe <em>to our newsletter<\/em><\/p>",
         "paragraph": "<p>Add descriptive text to invite your users to sign up for your newsletter.<\/p>"
       }
     }
@@ -664,7 +602,6 @@
     "6e71800e-22a3-457f-b902-ffa51664b1af",
     "2ff801b9-2c09-4c72-bccc-dd330e1cdf87",
     "5035fe8c-2acc-40f3-ada0-b62cca12b274",
-    "76fd847c-7a8a-495e-9e1e-57cf30735a61",
     "82e419c8-3746-4f17-9dcf-d3fae1f17e8c"
   ]
 }
