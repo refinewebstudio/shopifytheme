@@ -24,11 +24,11 @@
         "enable_filters": true,
         "filters_layout": "horizontal",
         "enable_sorting": true,
-        "grid_fullwidth": true,
+        "grid_fullwidth": false,
         "grid_side_margins": true,
         "grid_side_margins_mobile": true,
         "products_per_row_mobile": "1",
-        "products_per_row_desktop": "2",
+        "products_per_row_desktop": "4",
         "products_per_page": 6
       }
     }
