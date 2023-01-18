@@ -16,14 +16,14 @@
             "align_horizontal": "center",
             "show_background": false,
             "subheading": "",
-            "heading": "<p><em><strong>False Lashes Subscription<\/strong><\/em><\/p>",
+            "heading": "",
             "paragraph": "<p>Sign up for your monthly delivery<\/p>",
             "button_style_1": "solid",
             "button_size_1": "m",
             "button_text_1": "Sign Up",
-            "button_url_1": "shopify:\/\/collections\/all",
+            "button_url_1": "",
             "button_style_2": "outline",
-            "button_size_2": "m",
+            "button_size_2": "l",
             "button_text_2": "",
             "button_url_2": ""
           }
