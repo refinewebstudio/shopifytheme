@@ -59,6 +59,7 @@
         },
         "41565d3a-f614-4064-b7d2-08451e08cc1c": {
           "type": "collapsible-tabs",
+          "disabled": true,
           "settings": {
             "tab_title_1": "Tab title",
             "tab_content_1": "<p>Descriptive tab content<\/p>",
@@ -92,6 +93,7 @@
         },
         "cb7ffe72-8180-48b6-b297-9f63527404e9": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "Additional text"
           }
@@ -122,12 +124,51 @@
         "326d6c47-b378-4ff5-b875-8934d9e73b89"
       ],
       "settings": {
-        "style": "style-1",
-        "spacing_desktop": "mt-s--large mb-s--large",
-        "spacing_mobile": "mt-s mb-s",
+        "style": "style-3",
+        "spacing_desktop": "mt-xs--large mb-xs--large",
+        "spacing_mobile": "mt-xs mb-xs",
         "adaptive_slider_height": true,
         "enable_breadcrumbs": true,
         "gallery_type": "grid"
+      }
+    },
+    "836ec8a9-2a42-4140-9243-ef418cddd745": {
+      "type": "faq",
+      "blocks": {
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-0": {
+          "type": "question",
+          "settings": {
+            "question": "Some frequently asked question?",
+            "answer": "<p>Answer to the question.<\/p>",
+            "answer_page": ""
+          }
+        },
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-1": {
+          "type": "question",
+          "settings": {
+            "question": "Some frequently asked question?",
+            "answer": "<p>Answer to the question.<\/p>",
+            "answer_page": ""
+          }
+        },
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-2": {
+          "type": "question",
+          "settings": {
+            "question": "Some frequently asked question?",
+            "answer": "<p>Answer to the question.<\/p>",
+            "answer_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-0",
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-1",
+        "template--17400478466326__836ec8a9-2a42-4140-9243-ef418cddd745-1674079763a0b29b9c-2"
+      ],
+      "settings": {
+        "style": "style-1",
+        "subheading": "FAQ's",
+        "heading": ""
       }
     },
     "recommendations": {
@@ -138,7 +179,7 @@
         "spacing_mobile": "mt-0 mb-0",
         "layout": "slider-right",
         "subheading": "",
-        "heading": "<p>You Might Also Like<\/p>",
+        "heading": "<p><em>You Might Also Like<\/em><\/p>",
         "paragraph": "<p>Here are some more products that you might like based on our clients preferences.<\/p>",
         "autoplay": false,
         "autoplay_speed": 5
@@ -308,6 +349,7 @@
   },
   "order": [
     "main",
+    "836ec8a9-2a42-4140-9243-ef418cddd745",
     "recommendations",
     "4af2303e-fe4a-4e27-9acc-3bbdcfcf9362",
     "2e2d8759-c22f-4744-ac76-34c095bf6e76",
