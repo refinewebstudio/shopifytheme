@@ -8,9 +8,11 @@
     },
     "3c5bc4cd-fe50-4210-a0aa-a965f2047d40": {
       "type": "faq",
+      "disabled": true,
       "blocks": {
         "template--17400477876502__3c5bc4cd-fe50-4210-a0aa-a965f2047d40-16741194211ccbc12d-0": {
           "type": "question",
+          "disabled": true,
           "settings": {
             "question": "How do Lyngsy subscriptions work?",
             "answer": "<p><em>﻿﻿Our lash subscription service is the ultimate convenience and must-have for any lash lover. Never run out of your favorite lashes again by choosing to receive them on a regular basis. You get to mix and match the sets you want delivered. We currently have 3 styles; Classic Sets , Hybrid Sets & Full Sets. <\/em><\/p><p><em>You have full flexibility to pause or cancel your subscription at any time. Just head on over to our 'Log In' page to make an account to get started.<\/em><\/p>",
