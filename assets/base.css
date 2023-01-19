@@ -1692,6 +1692,9 @@ a.media--no-hover {
 
 .product__media{
   width: 400px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 400px !important;
 }
 .media--3-2 {
