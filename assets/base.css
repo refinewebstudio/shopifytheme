@@ -1692,11 +1692,20 @@ a.media--no-hover {
 
 .product__media{
   width: 400px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 400px !important;
 }
+
+.grid__item .grid__item--xs-12 .grid__item--s-6 .grid__item--s-6 > .product__media {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.product__media{
+  width: 400px !important;
+  height: 400px !important;
+}
+
+
 .media--3-2 {
   padding-bottom: 150%;
 }
