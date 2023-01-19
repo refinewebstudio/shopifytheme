@@ -8,11 +8,9 @@
     },
     "3c5bc4cd-fe50-4210-a0aa-a965f2047d40": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "template--17400477876502__3c5bc4cd-fe50-4210-a0aa-a965f2047d40-16741194211ccbc12d-0": {
           "type": "question",
-          "disabled": true,
           "settings": {
             "question": "How do Lyngsy subscriptions work?",
             "answer": "<p><em>﻿﻿Our lash subscription service is the ultimate convenience and must-have for any lash lover. Never run out of your favorite lashes again by choosing to receive them on a regular basis. You get to mix and match the sets you want delivered. We currently have 3 styles; Classic Sets , Hybrid Sets & Full Sets. <\/em><\/p><p><em>You have full flexibility to pause or cancel your subscription at any time. Just head on over to our 'Log In' page to make an account to get started.<\/em><\/p>",
@@ -50,6 +48,14 @@
             "answer": "<p><em>Taking care of your lashes is easy and will help them last longer so you can enjoy them for even more glamorous moments! Here are some tips to keep in mind:<\/em><\/p><p><em>-Gently remove your lashes from your eyes with tweezers or your fingers, starting from the outer corner and working inward.<\/em><\/p><p><em>-Clean the lashes with a cotton swab dipped in makeup remover, being careful not to pull or tug on the lashes.<\/em><\/p><p><em>-Place the lashes back in their case to keep them in shape.<\/em><\/p><p><em>-Avoid getting the lashes wet as much as possible.<\/em><\/p><p><em>-Keep your lashes away from excessive heat or humidity.<\/em><\/p><p><em>By following these simple steps, your lashes will stay beautiful and fluffy for a long time to come. And remember, we always recommend not to sleep with your lashes on, so they can breathe and stay in shape.<\/em><\/p>",
             "answer_page": ""
           }
+        },
+        "fd2d551a-a428-4eb2-bd45-bc1933701e42": {
+          "type": "question",
+          "settings": {
+            "question": "I'm a Makeup Artist (MUA), can I subscribe to receive monthly Lyngsy Lashes in bulk?",
+            "answer": "<p>Yes, we do provide lashes to makeup artists! Our subscription service is perfect for makeup artists looking to purchase lashes in bulk. You can subscribe to receive a monthly delivery.<\/p><p>We understand that as a makeup artist, you want to provide your clients with the best products, and our lashes are a great addition to your makeup kit. <\/p>",
+            "answer_page": ""
+          }
         }
       },
       "block_order": [
@@ -57,7 +63,8 @@
         "template--17400477876502__3c5bc4cd-fe50-4210-a0aa-a965f2047d40-16741194211ccbc12d-1",
         "template--17400477876502__3c5bc4cd-fe50-4210-a0aa-a965f2047d40-16741194211ccbc12d-2",
         "48408c20-78a0-4a2c-a333-3e95103434c7",
-        "c8512d82-e4d9-4779-9de5-2242d90403cb"
+        "c8512d82-e4d9-4779-9de5-2242d90403cb",
+        "fd2d551a-a428-4eb2-bd45-bc1933701e42"
       ],
       "settings": {
         "style": "style-1",
