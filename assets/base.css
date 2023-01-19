@@ -1691,7 +1691,8 @@ a.media--no-hover {
 }
 
 .media--portrait img{
-  max-width: 400px !important;
+  width: 400px !important;
+  height: 400px !important;
 }
 .media--3-2 {
   padding-bottom: 150%;
