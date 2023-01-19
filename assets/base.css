@@ -1690,7 +1690,7 @@ a.media--no-hover {
 
 }
 
-.media--portrait img{
+.product__media{
   width: 400px !important;
   height: 400px !important;
 }
