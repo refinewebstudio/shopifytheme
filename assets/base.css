@@ -1687,8 +1687,12 @@ a.media--no-hover {
 
 .media--portrait {
   padding-bottom: 133%;
+
 }
 
+.media--portrait img{
+  max-width: 400px !important;
+}
 .media--3-2 {
   padding-bottom: 150%;
 }
