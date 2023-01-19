@@ -1693,6 +1693,9 @@ a.media--no-hover {
 .product__media{
   width: 400px !important;
   height: 400px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid__item .grid__item--xs-12 .grid__item--s-6 .grid__item--s-6 > .product__media {
