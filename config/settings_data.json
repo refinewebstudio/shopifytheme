@@ -40,6 +40,11 @@
     "card_product_media_crop": true,
     "card_product_image_alignment": "center",
     "swatches_hex_codes": "",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_accent_color": "#000",
+    "checkout_button_color": "#ccc",
     "swatches_use_image_assets": false,
     "sections": {
       "cookie-banner": {
